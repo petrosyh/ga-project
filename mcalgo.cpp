@@ -64,10 +64,11 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 1" << endl;
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
-    cout << "iter : " << iteration << "max : " << gas.get_maxcut() << endl;
+    //cout << "iter : " << iteration << "  max : " << gas.get_maxcut() << endl;
     diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
   } while(diff_time <= ITERTIME);
 
+  gas.print_opt_set();
   return 0;
 }
 

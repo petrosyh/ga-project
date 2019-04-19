@@ -49,6 +49,21 @@ int maxval(vector<int> values) {
     return ret;
 }
 
+int maxwhere(vector<int> values) {
+    int ret = INT_MIN;
+    int i = 0;
+    int j = 0;
+    for (auto iter : values) {
+        i++;
+        if (ret < iter) {
+            ret = iter;
+            j = i;
+        }   
+    }
+    return j;
+}
+
+
 vector<Gene> Gasolver::get_gene_vector() {
     return gene_vector;
 }
@@ -116,6 +131,16 @@ int Gasolver::get_maxcut() {
     vector<int> values = get_all_value();
     int max = maxval(values);
     return max;
+}
+
+void Gasolver::print_opt_set() {
+    vector<int> values = get_all_value();
+    int max_state = maxwhere(values);
+    vector<bool> opt_set = gene_vector[max_state].get_gene();
+    for (int i = 0; i < opt_set.size(); i ++) {
+        if (opt_set[i])
+            cout << (i+1) << " ";
+    }
 }
 
 vector<double> Gasolver::fitnesses() {

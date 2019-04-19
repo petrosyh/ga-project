@@ -23,6 +23,7 @@ public:
     Gasolver generation(int child);
     int get_gas_size();
     int get_maxcut();
+    void print_opt_set();
     vector<int> get_all_value();
     vector<double> fitnesses();
 };
