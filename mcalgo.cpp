@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <ctime>
+#include <chrono>
 //#include "Graph.h"
 //#include "Gene.h"
 #include "Gasolver.h"
@@ -9,12 +10,13 @@
 using namespace std;
 
 #define INITIAL 1000
-#define ITERTIME 5
-#define CHILDNUM 40
+#define ITERTIME 173000
+#define CHILDNUM 200
 
 int main(int argc, char *argv[]) {
-  clock_t start_time = clock();
-  clock_t diff_time;
+  //clock_t start_time = clock();
+  const std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
+  //clock_t diff_time;
   string filePath = argv[1];  // "maxcut.in";
   int vtxnum, edgenum;
   int v1, v2, weight;
@@ -65,8 +67,9 @@ int main(int argc, char *argv[]) {
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
     //cout << "iter : " << iteration << "  max : " << gas.get_maxcut() << endl;
-    diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
-  } while(diff_time <= ITERTIME);
+    //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
+    
+  } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);
 
   gas.print_opt_set();
   return 0;

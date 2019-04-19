@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-
+//#define MUTATE 0.73
 
 double doubleRand() {
   return double(rand()) / (double(RAND_MAX) + 1.0);
@@ -61,8 +61,19 @@ int Gene::calc_soln_value_new(Graph gh, vector<bool> new_gene) {
 }
 
 Gene Gene::mutate() {
-    int ith = rand()/(gene.size());
-    gene[ith] != gene[ith];
+    srand(static_cast<unsigned int>(clock()));
+    int ith = rand()%(gene.size());
+    int sz = gene.size();
+    gene[ith] = !gene[ith];
+    ith = rand()%(gene.size());
+    gene[sz - ith - 1] = !gene[sz - ith - 1];
+    //int mutation_size = sz * MUTATE;
+    //for (int i = 0; i < mutation_size; i++) {
+    //    ith = rand()%(gene.size());
+    //    if (ith < mutation_size) {
+    //        gene[ith] = !gene[ith];
+    //    }
+    //}
     return *this;
 }
 

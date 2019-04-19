@@ -31,11 +31,11 @@ int minwhere(vector<int> values) {
     int i = 0;
     int j = 0;
     for (auto iter : values) {
-        i++;
         if (ret > iter) {
             ret = iter;
             j = i;
-        }   
+        }
+        i++;
     }
     return j;
 }
@@ -54,11 +54,11 @@ int maxwhere(vector<int> values) {
     int i = 0;
     int j = 0;
     for (auto iter : values) {
-        i++;
         if (ret < iter) {
             ret = iter;
             j = i;
-        }   
+        }
+        i++;
     }
     return j;
 }
@@ -72,31 +72,68 @@ int Gasolver::get_gas_size() {
     return size;
 }
 
-Gene Gasolver::selection() {
+pair<Gene, int> Gasolver::selection() {
+    srand(static_cast<unsigned int>(clock()));
     int selector = rand()%size;
-    return gene_vector[selector];
+    return make_pair(gene_vector[selector], selector);
 }
 
 Gene Gasolver::gas_merge() {
-    Gene g1 = selection();
-    Gene g2 = selection();
+    pair<Gene, int> sel1 = selection();
+    pair<Gene, int> sel2 = selection();
+    pair<Gene, int> sel3 = selection();
+    pair<Gene, int> sel4 = selection();
+    
+    Gene g1 = sel1.first;
+    Gene g2 = sel2.first;
+    Gene g3 = sel3.first;
+    Gene g4 = sel4.first;
+
+    int winner1, winner2, looser1, looser2;
+
     int gene_size = g1.get_gene().size();
-    vector<bool> new_gene;
+    vector<bool> new_gene1;
+    Gene ret;
+
+    if (g1.get_soln_value() > g2.get_soln_value()) {
+        looser1 = sel2.second;
+        winner1 = sel1.second;
+    } else if (g1.get_soln_value() < g2.get_soln_value()) {
+        looser1 = sel1.second;
+        winner1 = sel2.second;
+    } else {
+        looser1 = sel1.second;
+        winner1 = sel2.second;
+    }
+
+    if (g3.get_soln_value() > g4.get_soln_value()) {
+        looser2 = sel4.second;
+        winner2 = sel3.second;
+    } else if (g3.get_soln_value() < g4.get_soln_value()) {
+        looser2 = sel3.second;
+        winner2 = sel4.second;
+    } else {
+        looser2 = sel3.second;
+        winner2 = sel4.second;
+    }
 
     for (int i = 0; i < gene_size; i++) {
         if (i % 2 == 0) {
-            new_gene.push_back(g1.get_gene()[i]);
+            new_gene1.push_back(gene_vector[winner1].get_gene()[i]);
         } else {
-            new_gene.push_back(g2.get_gene()[i]);
+            new_gene1.push_back(gene_vector[winner2].get_gene()[i]);
         }
     }
-
+    ret = Gene(own_graph, new_gene1);
+    
+    gene_vector[looser1] = ret;
+    gene_vector[looser2] = ret;
     //for (auto i : new_gene) {
     //    cout << i;
     //}
     //cout << endl;
 
-    return Gene(own_graph, new_gene);
+    return ret;
 }
 
 Gasolver Gasolver::generation(int child) {
@@ -104,18 +141,30 @@ Gasolver Gasolver::generation(int child) {
     vector<Gene> new_children;
     int minstate;
     Gene g;
+    //cout << "here0" << endl;
     for (int i = 0; i < child; i++) {
         values = get_all_value();
+        //cout << "here1" << endl;
         minstate = minwhere(values);
+        //cout << "here2" << endl;
         g = gas_merge().mutate();
+        //cout << "here3  " << minstate << endl;
         gene_vector[minstate] = g;
     }
 
     
-    //sort(gene_vector.begin(), gene_vector.end());
-    //for (int j = 0; j < child; j ++) {
-    //    gene_vector[gene_vector.size() - j - 1] = new_children[j];
+    sort(gene_vector.begin(), gene_vector.end());
+    for (int j = 0; j < child; j ++) {
+        gene_vector[j] = gas_merge().mutate();
+    }
+    //cout << "here2" << endl;
+    
+    //for (auto iter: gene_vector) {
+    //    cout << iter.get_soln_value() << " ";
     //}
+    //cout << endl;
+    
+    
     return *this;
 }
 

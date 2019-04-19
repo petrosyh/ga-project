@@ -5,6 +5,7 @@
 #include <algorithm> 
 #include <iterator>
 #include <iostream>
+#include <utility> 
 
 using namespace std;
 
@@ -19,7 +20,7 @@ public:
     Gasolver();
     vector<Gene> get_gene_vector();
     Gene gas_merge();
-    Gene selection();
+    pair<Gene, int> selection();
     Gasolver generation(int child);
     int get_gas_size();
     int get_maxcut();
