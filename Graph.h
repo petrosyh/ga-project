@@ -5,8 +5,8 @@ using namespace std;
 
 class Graph {
 private:
-  const int vtx_num;
-  const int edge_num;
+  int vtx_num;
+  int edge_num;
   vector<pair<pair<int, int>, int>> edges; // ((v1, v2), weight)
 
 
