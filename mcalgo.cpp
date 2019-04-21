@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 1" << endl;
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
-    //cout << "iter : " << iteration << "  max : " << gas.get_maxcut() << endl;
+    cout << "iter : " << iteration << "  max : " << gas.get_maxcut() << "  avg : " << gas.get_maxcut_avg() << endl;
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);

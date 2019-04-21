@@ -49,6 +49,15 @@ int maxval(vector<int> values) {
     return ret;
 }
 
+int sumval(vector<int> values) {
+    int ret = 0;
+    for (auto iter : values) {
+        ret += iter;
+    }
+    return ret;
+}
+
+
 int maxwhere(vector<int> values) {
     int ret = INT_MIN;
     int i = 0;
@@ -180,6 +189,12 @@ int Gasolver::get_maxcut() {
     vector<int> values = get_all_value();
     int max = maxval(values);
     return max;
+}
+
+int Gasolver::get_maxcut_avg() {
+    vector<int> values = get_all_value();
+    int sum = sumval(values);
+    return (sum/size);
 }
 
 void Gasolver::print_opt_set() {
