@@ -86,6 +86,32 @@ vector<bool> Gene::get_gene() {
     return gene;
 }
 
+void Gene::local_opt(Graph gh) {
+  vector<int> rperm;
+  bool imp = true;
+  int delta = 0;
+  int size = gene.size();
+  vector<bool> filped_vector = gene;
+  
+  for (int i = 0; i < size; i ++) {
+    rperm.push_back(i);
+  }
+  random_shuffle (rperm.begin(), rperm.end());
+
+  while (imp) {
+    imp = false;
+    for (auto j: rperm) {
+      filped_vector[j] = !filped_vector[j];
+      delta = calc_soln_value_new(gh, filped_vector);
+      if (delta > 0) {
+	gene[j] = !gene[j];
+	soln_value = soln_value + delta;
+	imp = true;
+      }
+    }
+  }
+}
+
 Gene::Gene() {
     soln_value = INT_MIN;
 }

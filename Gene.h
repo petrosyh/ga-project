@@ -2,6 +2,7 @@
 #include <climits>
 #include <cstdlib>
 #include <ctime>
+#include <bits/stdc++.h> 
 #include "Graph.h"
 
 using namespace std;
@@ -20,5 +21,6 @@ public:
     int get_soln_value() const;
     vector<bool> get_gene();
     Gene mutate();
+    void local_opt(Graph gh);
 };
 bool operator<(const Gene &s1, const Gene &s2);

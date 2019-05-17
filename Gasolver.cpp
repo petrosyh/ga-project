@@ -157,6 +157,7 @@ Gasolver Gasolver::generation(int child) {
         minstate = minwhere(values);
         //cout << "here2" << endl;
         g = gas_merge().mutate();
+	g.local_opt(own_graph);
         //cout << "here3  " << minstate << endl;
         gene_vector[minstate] = g;
     }
@@ -164,7 +165,8 @@ Gasolver Gasolver::generation(int child) {
     
     sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
-        gene_vector[j] = gas_merge().mutate();
+      gene_vector[j] = gas_merge().mutate();
+      gene_vector[j].local_opt(own_graph);
     }
     //cout << "here2" << endl;
     
