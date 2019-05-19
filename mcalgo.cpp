@@ -68,11 +68,10 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 2" << endl;
     if (iteration % 10 == 0) {
     	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
-	for (auto iter: gas.get_gene_vector()) {
-	  cout << iter.get_soln_value() << " ";
-	}
-	cout << endl;
-    
+	// for (auto iter: gas.get_gene_vector()) {
+	//   cout << iter.get_soln_value() << " ";
+	// }
+	// cout << endl;    
     }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     

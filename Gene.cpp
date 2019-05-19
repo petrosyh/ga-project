@@ -124,9 +124,9 @@ Gene Gene::local_opt(Graph gh) {
     rperm.push_back(i);
   }
   random_shuffle (rperm.begin(), rperm.end());
-  int aaaa = calc_soln_value_new(gh, gene);
-  cout << "aaaaaaaaa: " << aaaa << endl;
-  cout << "soln : " << soln_value << endl;
+  // int aaaa = calc_soln_value_new(gh, gene);
+  // cout << "aaaaaaaaa: " << aaaa << endl;
+  // cout << "soln : " << soln_value << endl;
   // exit(0);
   
   // int i = 0;
@@ -144,37 +144,39 @@ Gene Gene::local_opt(Graph gh) {
       delta = get_delta(gh, gene, j);
       // cout << "hi4" << endl;
       if (delta > 0) {
-	cout << endl;
-	cout << "j info : " << j << " delta : " << delta << endl;
-	int a_soln_value = calc_soln_value_new(gh, gene);
-	cout << "before flip: " << a_soln_value << endl;
+	// cout << endl;
+	// cout << "j info : " << j << " delta : " << delta << endl;
+	// int a_soln_value = calc_soln_value_new(gh, gene);
+	// cout << "before flip: " << a_soln_value << endl;
 	// cout << "hi5" << endl;
 	gene[j-1] = !gene[j-1];
 	// cout << "hi6" << endl;
-	int b_soln_value = calc_soln_value_new(gh, gene);
-	cout << "after flip: " << b_soln_value << endl;
-	assert ((b_soln_value - a_soln_value) == delta);
+	// int b_soln_value = calc_soln_value_new(gh, gene);
+	// cout << "after flip: " << b_soln_value << endl;
+	// assert ((b_soln_value - a_soln_value) == delta);
+
 	soln_value = soln_value + delta;
-	cout << "soln val 1: " << soln_value << endl;
+
+	// cout << "soln val 1: " << soln_value << endl;
 	//assert (soln_value == b_soln_value);
 	imp = true;
       }
     }
-    int c_soln_value = calc_soln_value_new(gh, gene);
-    cout << "c value: " << c_soln_value << endl;
-    cout << "soln val 2: " << soln_value << endl;
+    // int c_soln_value = calc_soln_value_new(gh, gene);
+    // cout << "c value: " << c_soln_value << endl;
+    // cout << "soln val 2: " << soln_value << endl;
   }
-  int bbbb = calc_soln_value_new(gh, gene);
+  // int bbbb = calc_soln_value_new(gh, gene);
 
-  if (bbbb>aaaa) {
-    cout << "before_opt: " << aaaa << endl;
-    cout << "delta : " << bbbb - aaaa << endl;
-    cout << "after_opt: " << bbbb << endl;
-    cout << "after_opt soln: " << soln_value << endl;
-    assert (bbbb == soln_value);
-    // exit(0);
-  }
-  assert (bbbb>=aaaa);
+  // if (bbbb>aaaa) {
+  //   cout << "before_opt: " << aaaa << endl;
+  //   cout << "delta : " << bbbb - aaaa << endl;
+  //   cout << "after_opt: " << bbbb << endl;
+  //   cout << "after_opt soln: " << soln_value << endl;
+  //   assert (bbbb == soln_value);
+  //   // exit(0);
+  // }
+  // assert (bbbb>=aaaa);
   // cout << "hi end" << endl;
   //  int after_val = calc_soln_value_new(gh, gene);
   return *this;
