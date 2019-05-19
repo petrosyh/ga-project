@@ -1,0 +1,2634 @@
+
+j info : 827 delta : 4
+before flip: 6290
+after flip: 6294
+soln val 1: 6302
+
+j info : 173 delta : 9
+before flip: 6294
+after flip: 6303
+soln val 1: 6311
+
+j info : 17 delta : 21
+before flip: 6303
+after flip: 6324
+soln val 1: 6332
+
+j info : 722 delta : 21
+before flip: 6324
+after flip: 6345
+soln val 1: 6353
+
+j info : 172 delta : 2
+before flip: 6345
+after flip: 6347
+soln val 1: 6355
+
+j info : 273 delta : 1
+before flip: 6347
+after flip: 6348
+soln val 1: 6356
+
+j info : 806 delta : 6
+before flip: 6348
+after flip: 6354
+soln val 1: 6362
+
+j info : 753 delta : 1
+before flip: 6354
+after flip: 6355
+soln val 1: 6363
+
+j info : 649 delta : 11
+before flip: 6355
+after flip: 6366
+soln val 1: 6374
+
+j info : 613 delta : 12
+before flip: 6366
+after flip: 6378
+soln val 1: 6386
+
+j info : 992 delta : 15
+before flip: 6378
+after flip: 6393
+soln val 1: 6401
+
+j info : 768 delta : 10
+before flip: 6393
+after flip: 6403
+soln val 1: 6411
+
+j info : 119 delta : 8
+before flip: 6403
+after flip: 6411
+soln val 1: 6419
+
+j info : 684 delta : 5
+before flip: 6411
+after flip: 6416
+soln val 1: 6424
+
+j info : 484 delta : 12
+before flip: 6416
+after flip: 6428
+soln val 1: 6436
+
+j info : 545 delta : 13
+before flip: 6428
+after flip: 6441
+soln val 1: 6449
+
+j info : 214 delta : 7
+before flip: 6441
+after flip: 6448
+soln val 1: 6456
+
+j info : 757 delta : 10
+before flip: 6448
+after flip: 6458
+soln val 1: 6466
+
+j info : 343 delta : 7
+before flip: 6458
+after flip: 6465
+soln val 1: 6473
+
+j info : 464 delta : 1
+before flip: 6465
+after flip: 6466
+soln val 1: 6474
+
+j info : 203 delta : 2
+before flip: 6466
+after flip: 6468
+soln val 1: 6476
+
+j info : 755 delta : 13
+before flip: 6468
+after flip: 6481
+soln val 1: 6489
+
+j info : 485 delta : 11
+before flip: 6481
+after flip: 6492
+soln val 1: 6500
+
+j info : 65 delta : 2
+before flip: 6492
+after flip: 6494
+soln val 1: 6502
+
+j info : 77 delta : 21
+before flip: 6494
+after flip: 6515
+soln val 1: 6523
+
+j info : 587 delta : 10
+before flip: 6515
+after flip: 6525
+soln val 1: 6533
+
+j info : 40 delta : 1
+before flip: 6525
+after flip: 6526
+soln val 1: 6534
+
+j info : 107 delta : 2
+before flip: 6526
+after flip: 6528
+soln val 1: 6536
+
+j info : 487 delta : 6
+before flip: 6528
+after flip: 6534
+soln val 1: 6542
+
+j info : 846 delta : 8
+before flip: 6534
+after flip: 6542
+soln val 1: 6550
+
+j info : 5 delta : 4
+before flip: 6542
+after flip: 6546
+soln val 1: 6554
+
+j info : 626 delta : 12
+before flip: 6546
+after flip: 6558
+soln val 1: 6566
+
+j info : 660 delta : 7
+before flip: 6558
+after flip: 6565
+soln val 1: 6573
+
+j info : 10 delta : 3
+before flip: 6565
+after flip: 6568
+soln val 1: 6576
+
+j info : 786 delta : 1
+before flip: 6568
+after flip: 6569
+soln val 1: 6577
+
+j info : 243 delta : 6
+before flip: 6569
+after flip: 6575
+soln val 1: 6583
+
+j info : 512 delta : 19
+before flip: 6575
+after flip: 6594
+soln val 1: 6602
+
+j info : 495 delta : 7
+before flip: 6594
+after flip: 6601
+soln val 1: 6609
+
+j info : 985 delta : 3
+before flip: 6601
+after flip: 6604
+soln val 1: 6612
+
+j info : 997 delta : 6
+before flip: 6604
+after flip: 6610
+soln val 1: 6618
+
+j info : 429 delta : 4
+before flip: 6610
+after flip: 6614
+soln val 1: 6622
+
+j info : 276 delta : 2
+before flip: 6614
+after flip: 6616
+soln val 1: 6624
+
+j info : 290 delta : 2
+before flip: 6616
+after flip: 6618
+soln val 1: 6626
+
+j info : 274 delta : 5
+before flip: 6618
+after flip: 6623
+soln val 1: 6631
+
+j info : 215 delta : 1
+before flip: 6623
+after flip: 6624
+soln val 1: 6632
+
+j info : 393 delta : 7
+before flip: 6624
+after flip: 6631
+soln val 1: 6639
+
+j info : 398 delta : 5
+before flip: 6631
+after flip: 6636
+soln val 1: 6644
+
+j info : 100 delta : 4
+before flip: 6636
+after flip: 6640
+soln val 1: 6648
+
+j info : 146 delta : 13
+before flip: 6640
+after flip: 6653
+soln val 1: 6661
+
+j info : 482 delta : 1
+before flip: 6653
+after flip: 6654
+soln val 1: 6662
+
+j info : 130 delta : 3
+before flip: 6654
+after flip: 6657
+soln val 1: 6665
+
+j info : 209 delta : 17
+before flip: 6657
+after flip: 6674
+soln val 1: 6682
+
+j info : 437 delta : 3
+before flip: 6674
+after flip: 6677
+soln val 1: 6685
+
+j info : 750 delta : 18
+before flip: 6677
+after flip: 6695
+soln val 1: 6703
+
+j info : 424 delta : 2
+before flip: 6695
+after flip: 6697
+soln val 1: 6705
+
+j info : 607 delta : 1
+before flip: 6697
+after flip: 6698
+soln val 1: 6706
+
+j info : 854 delta : 16
+before flip: 6698
+after flip: 6714
+soln val 1: 6722
+
+j info : 864 delta : 3
+before flip: 6714
+after flip: 6717
+soln val 1: 6725
+
+j info : 627 delta : 12
+before flip: 6717
+after flip: 6729
+soln val 1: 6737
+
+j info : 154 delta : 13
+before flip: 6729
+after flip: 6742
+soln val 1: 6750
+
+j info : 478 delta : 2
+before flip: 6742
+after flip: 6744
+soln val 1: 6752
+
+j info : 798 delta : 4
+before flip: 6744
+after flip: 6748
+soln val 1: 6756
+
+j info : 1 delta : 10
+before flip: 6748
+after flip: 6758
+soln val 1: 6766
+
+j info : 268 delta : 5
+before flip: 6758
+after flip: 6763
+soln val 1: 6771
+
+j info : 590 delta : 10
+before flip: 6763
+after flip: 6773
+soln val 1: 6781
+
+j info : 967 delta : 10
+before flip: 6773
+after flip: 6783
+soln val 1: 6791
+
+j info : 44 delta : 7
+before flip: 6783
+after flip: 6790
+soln val 1: 6798
+
+j info : 610 delta : 8
+before flip: 6790
+after flip: 6798
+soln val 1: 6806
+
+j info : 419 delta : 9
+before flip: 6798
+after flip: 6807
+soln val 1: 6815
+
+j info : 655 delta : 2
+before flip: 6807
+after flip: 6809
+soln val 1: 6817
+
+j info : 37 delta : 8
+before flip: 6809
+after flip: 6817
+soln val 1: 6825
+
+j info : 283 delta : 4
+before flip: 6817
+after flip: 6821
+soln val 1: 6829
+
+j info : 292 delta : 6
+before flip: 6821
+after flip: 6827
+soln val 1: 6835
+
+j info : 250 delta : 5
+before flip: 6827
+after flip: 6832
+soln val 1: 6840
+
+j info : 439 delta : 16
+before flip: 6832
+after flip: 6848
+soln val 1: 6856
+
+j info : 195 delta : 1
+before flip: 6848
+after flip: 6849
+soln val 1: 6857
+
+j info : 929 delta : 8
+before flip: 6849
+after flip: 6857
+soln val 1: 6865
+
+j info : 115 delta : 9
+before flip: 6857
+after flip: 6866
+soln val 1: 6874
+
+j info : 352 delta : 5
+before flip: 6866
+after flip: 6871
+soln val 1: 6879
+
+j info : 332 delta : 6
+before flip: 6871
+after flip: 6877
+soln val 1: 6885
+
+j info : 144 delta : 8
+before flip: 6877
+after flip: 6885
+soln val 1: 6893
+
+j info : 785 delta : 9
+before flip: 6885
+after flip: 6894
+soln val 1: 6902
+
+j info : 469 delta : 6
+before flip: 6894
+after flip: 6900
+soln val 1: 6908
+
+j info : 943 delta : 1
+before flip: 6900
+after flip: 6901
+soln val 1: 6909
+
+j info : 910 delta : 9
+before flip: 6901
+after flip: 6910
+soln val 1: 6918
+
+j info : 830 delta : 4
+before flip: 6910
+after flip: 6914
+soln val 1: 6922
+
+j info : 416 delta : 11
+before flip: 6914
+after flip: 6925
+soln val 1: 6933
+
+j info : 300 delta : 5
+before flip: 6925
+after flip: 6930
+soln val 1: 6938
+
+j info : 253 delta : 11
+before flip: 6930
+after flip: 6941
+soln val 1: 6949
+
+j info : 118 delta : 8
+before flip: 6941
+after flip: 6949
+soln val 1: 6957
+
+j info : 451 delta : 16
+before flip: 6949
+after flip: 6965
+soln val 1: 6973
+
+j info : 688 delta : 5
+before flip: 6965
+after flip: 6970
+soln val 1: 6978
+
+j info : 917 delta : 11
+before flip: 6970
+after flip: 6981
+soln val 1: 6989
+
+j info : 23 delta : 4
+before flip: 6981
+after flip: 6985
+soln val 1: 6993
+
+j info : 399 delta : 2
+before flip: 6985
+after flip: 6987
+soln val 1: 6995
+
+j info : 509 delta : 5
+before flip: 6987
+after flip: 6992
+soln val 1: 7000
+
+j info : 323 delta : 7
+before flip: 6992
+after flip: 6999
+soln val 1: 7007
+
+j info : 748 delta : 6
+before flip: 6999
+after flip: 7005
+soln val 1: 7013
+
+j info : 258 delta : 2
+before flip: 7005
+after flip: 7007
+soln val 1: 7015
+
+j info : 254 delta : 4
+before flip: 7007
+after flip: 7011
+soln val 1: 7019
+
+j info : 986 delta : 10
+before flip: 7011
+after flip: 7021
+soln val 1: 7029
+
+j info : 278 delta : 7
+before flip: 7021
+after flip: 7028
+soln val 1: 7036
+
+j info : 455 delta : 6
+before flip: 7028
+after flip: 7034
+soln val 1: 7042
+
+j info : 634 delta : 11
+before flip: 7034
+after flip: 7045
+soln val 1: 7053
+
+j info : 712 delta : 11
+before flip: 7045
+after flip: 7056
+soln val 1: 7064
+
+j info : 729 delta : 5
+before flip: 7056
+after flip: 7061
+soln val 1: 7069
+
+j info : 543 delta : 3
+before flip: 7061
+after flip: 7064
+soln val 1: 7072
+
+j info : 9 delta : 4
+before flip: 7064
+after flip: 7068
+soln val 1: 7076
+
+j info : 110 delta : 3
+before flip: 7068
+after flip: 7071
+soln val 1: 7079
+
+j info : 686 delta : 2
+before flip: 7071
+after flip: 7073
+soln val 1: 7081
+
+j info : 567 delta : 1
+before flip: 7073
+after flip: 7074
+soln val 1: 7082
+
+j info : 887 delta : 6
+before flip: 7074
+after flip: 7080
+soln val 1: 7088
+
+j info : 903 delta : 12
+before flip: 7080
+after flip: 7092
+soln val 1: 7100
+
+j info : 583 delta : 3
+before flip: 7092
+after flip: 7095
+soln val 1: 7103
+
+j info : 423 delta : 3
+before flip: 7095
+after flip: 7098
+soln val 1: 7106
+
+j info : 636 delta : 6
+before flip: 7098
+after flip: 7104
+soln val 1: 7112
+
+j info : 938 delta : 19
+before flip: 7104
+after flip: 7123
+soln val 1: 7131
+
+j info : 401 delta : 6
+before flip: 7123
+after flip: 7129
+soln val 1: 7137
+
+j info : 873 delta : 1
+before flip: 7129
+after flip: 7130
+soln val 1: 7138
+
+j info : 233 delta : 9
+before flip: 7130
+after flip: 7139
+soln val 1: 7147
+
+j info : 899 delta : 10
+before flip: 7139
+after flip: 7149
+soln val 1: 7157
+
+j info : 499 delta : 1
+before flip: 7149
+after flip: 7150
+soln val 1: 7158
+
+j info : 104 delta : 9
+before flip: 7150
+after flip: 7159
+soln val 1: 7167
+
+j info : 832 delta : 6
+before flip: 7159
+after flip: 7165
+soln val 1: 7173
+
+j info : 847 delta : 5
+before flip: 7165
+after flip: 7170
+soln val 1: 7178
+
+j info : 317 delta : 12
+before flip: 7170
+after flip: 7182
+soln val 1: 7190
+
+j info : 468 delta : 7
+before flip: 7182
+after flip: 7189
+soln val 1: 7197
+
+j info : 532 delta : 2
+before flip: 7189
+after flip: 7191
+soln val 1: 7199
+
+j info : 662 delta : 1
+before flip: 7191
+after flip: 7192
+soln val 1: 7200
+
+j info : 838 delta : 11
+before flip: 7192
+after flip: 7203
+soln val 1: 7211
+
+j info : 876 delta : 2
+before flip: 7203
+after flip: 7205
+soln val 1: 7213
+
+j info : 674 delta : 8
+before flip: 7205
+after flip: 7213
+soln val 1: 7221
+
+j info : 537 delta : 6
+before flip: 7213
+after flip: 7219
+soln val 1: 7227
+
+j info : 682 delta : 6
+before flip: 7219
+after flip: 7225
+soln val 1: 7233
+
+j info : 695 delta : 6
+before flip: 7225
+after flip: 7231
+soln val 1: 7239
+
+j info : 850 delta : 1
+before flip: 7231
+after flip: 7232
+soln val 1: 7240
+
+j info : 915 delta : 5
+before flip: 7232
+after flip: 7237
+soln val 1: 7245
+
+j info : 965 delta : 7
+before flip: 7237
+after flip: 7244
+soln val 1: 7252
+
+j info : 73 delta : 3
+before flip: 7244
+after flip: 7247
+soln val 1: 7255
+
+j info : 975 delta : 5
+before flip: 7247
+after flip: 7252
+soln val 1: 7260
+
+j info : 67 delta : 7
+before flip: 7252
+after flip: 7259
+soln val 1: 7267
+
+j info : 287 delta : 3
+before flip: 7259
+after flip: 7262
+soln val 1: 7270
+
+j info : 380 delta : 1
+before flip: 7262
+after flip: 7263
+soln val 1: 7271
+
+j info : 639 delta : 6
+before flip: 7263
+after flip: 7269
+soln val 1: 7277
+
+j info : 727 delta : 7
+before flip: 7269
+after flip: 7276
+soln val 1: 7284
+
+j info : 953 delta : 1
+before flip: 7276
+after flip: 7277
+soln val 1: 7285
+
+j info : 770 delta : 9
+before flip: 7277
+after flip: 7286
+soln val 1: 7294
+
+j info : 339 delta : 6
+before flip: 7286
+after flip: 7292
+soln val 1: 7300
+
+j info : 698 delta : 1
+before flip: 7292
+after flip: 7293
+soln val 1: 7301
+
+j info : 783 delta : 1
+before flip: 7293
+after flip: 7294
+soln val 1: 7302
+
+j info : 708 delta : 6
+before flip: 7294
+after flip: 7300
+soln val 1: 7308
+
+j info : 53 delta : 12
+before flip: 7300
+after flip: 7312
+soln val 1: 7320
+
+j info : 186 delta : 11
+before flip: 7312
+after flip: 7323
+soln val 1: 7331
+
+j info : 874 delta : 1
+before flip: 7323
+after flip: 7324
+soln val 1: 7332
+
+j info : 181 delta : 12
+before flip: 7324
+after flip: 7336
+soln val 1: 7344
+
+j info : 491 delta : 10
+before flip: 7336
+after flip: 7346
+soln val 1: 7354
+
+j info : 820 delta : 5
+before flip: 7346
+after flip: 7351
+soln val 1: 7359
+
+j info : 781 delta : 14
+before flip: 7351
+after flip: 7365
+soln val 1: 7373
+
+j info : 901 delta : 2
+before flip: 7365
+after flip: 7367
+soln val 1: 7375
+
+j info : 345 delta : 5
+before flip: 7367
+after flip: 7372
+soln val 1: 7380
+
+j info : 324 delta : 2
+before flip: 7372
+after flip: 7374
+soln val 1: 7382
+
+j info : 787 delta : 3
+before flip: 7374
+after flip: 7377
+soln val 1: 7385
+
+j info : 777 delta : 8
+before flip: 7377
+after flip: 7385
+soln val 1: 7393
+
+j info : 653 delta : 3
+before flip: 7385
+after flip: 7388
+soln val 1: 7396
+
+j info : 7 delta : 8
+before flip: 7388
+after flip: 7396
+soln val 1: 7404
+
+j info : 989 delta : 4
+before flip: 7396
+after flip: 7400
+soln val 1: 7408
+
+j info : 808 delta : 2
+before flip: 7400
+after flip: 7402
+soln val 1: 7410
+
+j info : 632 delta : 3
+before flip: 7402
+after flip: 7405
+soln val 1: 7413
+
+j info : 904 delta : 20
+before flip: 7405
+after flip: 7425
+soln val 1: 7433
+
+j info : 336 delta : 1
+before flip: 7425
+after flip: 7426
+soln val 1: 7434
+
+j info : 728 delta : 3
+before flip: 7426
+after flip: 7429
+soln val 1: 7437
+
+j info : 931 delta : 14
+before flip: 7429
+after flip: 7443
+soln val 1: 7451
+
+j info : 312 delta : 9
+before flip: 7443
+after flip: 7452
+soln val 1: 7460
+
+j info : 889 delta : 2
+before flip: 7452
+after flip: 7454
+soln val 1: 7462
+
+j info : 754 delta : 9
+before flip: 7454
+after flip: 7463
+soln val 1: 7471
+
+j info : 765 delta : 3
+before flip: 7463
+after flip: 7466
+soln val 1: 7474
+
+j info : 536 delta : 9
+before flip: 7466
+after flip: 7475
+soln val 1: 7483
+
+j info : 246 delta : 17
+before flip: 7475
+after flip: 7492
+soln val 1: 7500
+
+j info : 207 delta : 8
+before flip: 7492
+after flip: 7500
+soln val 1: 7508
+
+j info : 496 delta : 6
+before flip: 7500
+after flip: 7506
+soln val 1: 7514
+
+j info : 742 delta : 3
+before flip: 7506
+after flip: 7509
+soln val 1: 7517
+
+j info : 204 delta : 2
+before flip: 7509
+after flip: 7511
+soln val 1: 7519
+
+j info : 169 delta : 2
+before flip: 7511
+after flip: 7513
+soln val 1: 7521
+
+j info : 616 delta : 6
+before flip: 7513
+after flip: 7519
+soln val 1: 7527
+
+j info : 445 delta : 3
+before flip: 7519
+after flip: 7522
+soln val 1: 7530
+
+j info : 807 delta : 9
+before flip: 7522
+after flip: 7531
+soln val 1: 7539
+
+j info : 99 delta : 3
+before flip: 7531
+after flip: 7534
+soln val 1: 7542
+
+j info : 676 delta : 4
+before flip: 7534
+after flip: 7538
+soln val 1: 7546
+
+j info : 168 delta : 3
+before flip: 7538
+after flip: 7541
+soln val 1: 7549
+
+j info : 672 delta : 9
+before flip: 7541
+after flip: 7550
+soln val 1: 7558
+
+j info : 326 delta : 14
+before flip: 7550
+after flip: 7564
+soln val 1: 7572
+
+j info : 705 delta : 9
+before flip: 7564
+after flip: 7573
+soln val 1: 7581
+
+j info : 725 delta : 12
+before flip: 7573
+after flip: 7585
+soln val 1: 7593
+
+j info : 30 delta : 6
+before flip: 7585
+after flip: 7591
+soln val 1: 7599
+
+j info : 570 delta : 7
+before flip: 7591
+after flip: 7598
+soln val 1: 7606
+
+j info : 83 delta : 1
+before flip: 7598
+after flip: 7599
+soln val 1: 7607
+
+j info : 143 delta : 2
+before flip: 7599
+after flip: 7601
+soln val 1: 7609
+
+j info : 638 delta : 2
+before flip: 7601
+after flip: 7603
+soln val 1: 7611
+
+j info : 49 delta : 13
+before flip: 7603
+after flip: 7616
+soln val 1: 7624
+
+j info : 442 delta : 11
+before flip: 7616
+after flip: 7627
+soln val 1: 7635
+
+j info : 983 delta : 4
+before flip: 7627
+after flip: 7631
+soln val 1: 7639
+
+j info : 166 delta : 6
+before flip: 7631
+after flip: 7637
+soln val 1: 7645
+
+j info : 580 delta : 8
+before flip: 7637
+after flip: 7645
+soln val 1: 7653
+
+j info : 726 delta : 6
+before flip: 7645
+after flip: 7651
+soln val 1: 7659
+
+j info : 304 delta : 3
+before flip: 7651
+after flip: 7654
+soln val 1: 7662
+
+j info : 647 delta : 14
+before flip: 7654
+after flip: 7668
+soln val 1: 7676
+
+j info : 346 delta : 1
+before flip: 7668
+after flip: 7669
+soln val 1: 7677
+
+j info : 868 delta : 1
+before flip: 7669
+after flip: 7670
+soln val 1: 7678
+
+j info : 325 delta : 2
+before flip: 7670
+after flip: 7672
+soln val 1: 7680
+
+j info : 403 delta : 3
+before flip: 7672
+after flip: 7675
+soln val 1: 7683
+
+j info : 585 delta : 13
+before flip: 7675
+after flip: 7688
+soln val 1: 7696
+
+j info : 963 delta : 1
+before flip: 7688
+after flip: 7689
+soln val 1: 7697
+
+j info : 826 delta : 3
+before flip: 7689
+after flip: 7692
+soln val 1: 7700
+
+j info : 8 delta : 5
+before flip: 7692
+after flip: 7697
+soln val 1: 7705
+
+j info : 199 delta : 2
+before flip: 7697
+after flip: 7699
+soln val 1: 7707
+
+j info : 977 delta : 8
+before flip: 7699
+after flip: 7707
+soln val 1: 7715
+
+j info : 378 delta : 9
+before flip: 7707
+after flip: 7716
+soln val 1: 7724
+
+j info : 971 delta : 1
+before flip: 7716
+after flip: 7717
+soln val 1: 7725
+
+j info : 831 delta : 1
+before flip: 7717
+after flip: 7718
+soln val 1: 7726
+
+j info : 421 delta : 2
+before flip: 7718
+after flip: 7720
+soln val 1: 7728
+
+j info : 871 delta : 8
+before flip: 7720
+after flip: 7728
+soln val 1: 7736
+
+j info : 236 delta : 16
+before flip: 7728
+after flip: 7744
+soln val 1: 7752
+
+j info : 980 delta : 3
+before flip: 7744
+after flip: 7747
+soln val 1: 7755
+
+j info : 61 delta : 5
+before flip: 7747
+after flip: 7752
+soln val 1: 7760
+
+j info : 516 delta : 7
+before flip: 7752
+after flip: 7759
+soln val 1: 7767
+
+j info : 602 delta : 2
+before flip: 7759
+after flip: 7761
+soln val 1: 7769
+
+j info : 145 delta : 8
+before flip: 7761
+after flip: 7769
+soln val 1: 7777
+
+j info : 894 delta : 4
+before flip: 7769
+after flip: 7773
+soln val 1: 7781
+
+j info : 284 delta : 5
+before flip: 7773
+after flip: 7778
+soln val 1: 7786
+
+j info : 809 delta : 6
+before flip: 7778
+after flip: 7784
+soln val 1: 7792
+
+j info : 257 delta : 5
+before flip: 7784
+after flip: 7789
+soln val 1: 7797
+
+j info : 700 delta : 10
+before flip: 7789
+after flip: 7799
+soln val 1: 7807
+
+j info : 454 delta : 12
+before flip: 7799
+after flip: 7811
+soln val 1: 7819
+
+j info : 351 delta : 4
+before flip: 7811
+after flip: 7815
+soln val 1: 7823
+
+j info : 222 delta : 8
+before flip: 7815
+after flip: 7823
+soln val 1: 7831
+
+j info : 297 delta : 2
+before flip: 7823
+after flip: 7825
+soln val 1: 7833
+
+j info : 837 delta : 23
+before flip: 7825
+after flip: 7848
+soln val 1: 7856
+
+j info : 406 delta : 6
+before flip: 7848
+after flip: 7854
+soln val 1: 7862
+
+j info : 860 delta : 2
+before flip: 7854
+after flip: 7856
+soln val 1: 7864
+
+j info : 978 delta : 4
+before flip: 7856
+after flip: 7860
+soln val 1: 7868
+
+j info : 940 delta : 1
+before flip: 7860
+after flip: 7861
+soln val 1: 7869
+
+j info : 161 delta : 7
+before flip: 7861
+after flip: 7868
+soln val 1: 7876
+
+j info : 245 delta : 11
+before flip: 7868
+after flip: 7879
+soln val 1: 7887
+
+j info : 341 delta : 8
+before flip: 7879
+after flip: 7887
+soln val 1: 7895
+
+j info : 202 delta : 6
+before flip: 7887
+after flip: 7893
+soln val 1: 7901
+
+j info : 238 delta : 7
+before flip: 7893
+after flip: 7900
+soln val 1: 7908
+
+j info : 385 delta : 8
+before flip: 7900
+after flip: 7908
+soln val 1: 7916
+
+j info : 194 delta : 14
+before flip: 7908
+after flip: 7922
+soln val 1: 7930
+
+j info : 907 delta : 1
+before flip: 7922
+after flip: 7923
+soln val 1: 7931
+
+j info : 219 delta : 3
+before flip: 7923
+after flip: 7926
+soln val 1: 7934
+
+j info : 64 delta : 4
+before flip: 7926
+after flip: 7930
+soln val 1: 7938
+
+j info : 453 delta : 5
+before flip: 7930
+after flip: 7935
+soln val 1: 7943
+
+j info : 462 delta : 7
+before flip: 7935
+after flip: 7942
+soln val 1: 7950
+
+j info : 344 delta : 1
+before flip: 7942
+after flip: 7943
+soln val 1: 7951
+
+j info : 523 delta : 6
+before flip: 7943
+after flip: 7949
+soln val 1: 7957
+
+j info : 184 delta : 3
+before flip: 7949
+after flip: 7952
+soln val 1: 7960
+
+j info : 923 delta : 3
+before flip: 7952
+after flip: 7955
+soln val 1: 7963
+
+j info : 611 delta : 3
+before flip: 7955
+after flip: 7958
+soln val 1: 7966
+
+j info : 158 delta : 9
+before flip: 7958
+after flip: 7967
+soln val 1: 7975
+
+j info : 851 delta : 7
+before flip: 7967
+after flip: 7974
+soln val 1: 7982
+
+j info : 350 delta : 7
+before flip: 7974
+after flip: 7981
+soln val 1: 7989
+
+j info : 706 delta : 2
+before flip: 7981
+after flip: 7983
+soln val 1: 7991
+
+j info : 48 delta : 1
+before flip: 7983
+after flip: 7984
+soln val 1: 7992
+
+j info : 718 delta : 1
+before flip: 7984
+after flip: 7985
+soln val 1: 7993
+
+j info : 218 delta : 6
+before flip: 7985
+after flip: 7991
+soln val 1: 7999
+
+j info : 381 delta : 2
+before flip: 7991
+after flip: 7993
+soln val 1: 8001
+
+j info : 761 delta : 3
+before flip: 7993
+after flip: 7996
+soln val 1: 8004
+
+j info : 735 delta : 2
+before flip: 7996
+after flip: 7998
+soln val 1: 8006
+
+j info : 410 delta : 5
+before flip: 7998
+after flip: 8003
+soln val 1: 8011
+
+j info : 200 delta : 10
+before flip: 8003
+after flip: 8013
+soln val 1: 8021
+
+j info : 737 delta : 6
+before flip: 8013
+after flip: 8019
+soln val 1: 8027
+
+j info : 685 delta : 6
+before flip: 8019
+after flip: 8025
+soln val 1: 8033
+
+j info : 683 delta : 2
+before flip: 8025
+after flip: 8027
+soln val 1: 8035
+
+j info : 614 delta : 11
+before flip: 8027
+after flip: 8038
+soln val 1: 8046
+
+j info : 577 delta : 2
+before flip: 8038
+after flip: 8040
+soln val 1: 8048
+
+j info : 506 delta : 10
+before flip: 8040
+after flip: 8050
+soln val 1: 8058
+
+j info : 170 delta : 5
+before flip: 8050
+after flip: 8055
+soln val 1: 8063
+
+j info : 514 delta : 6
+before flip: 8055
+after flip: 8061
+soln val 1: 8069
+
+j info : 949 delta : 4
+before flip: 8061
+after flip: 8065
+soln val 1: 8073
+
+j info : 240 delta : 3
+before flip: 8065
+after flip: 8068
+soln val 1: 8076
+
+j info : 128 delta : 9
+before flip: 8068
+after flip: 8077
+soln val 1: 8085
+
+j info : 418 delta : 1
+before flip: 8077
+after flip: 8078
+soln val 1: 8086
+
+j info : 93 delta : 2
+before flip: 8078
+after flip: 8080
+soln val 1: 8088
+
+j info : 643 delta : 4
+before flip: 8080
+after flip: 8084
+soln val 1: 8092
+
+j info : 562 delta : 3
+before flip: 8084
+after flip: 8087
+soln val 1: 8095
+
+j info : 968 delta : 1
+before flip: 8087
+after flip: 8088
+soln val 1: 8096
+
+j info : 266 delta : 4
+before flip: 8088
+after flip: 8092
+soln val 1: 8100
+
+j info : 862 delta : 1
+before flip: 8092
+after flip: 8093
+soln val 1: 8101
+
+j info : 430 delta : 9
+before flip: 8093
+after flip: 8102
+soln val 1: 8110
+
+j info : 412 delta : 3
+before flip: 8102
+after flip: 8105
+soln val 1: 8113
+
+j info : 678 delta : 4
+before flip: 8105
+after flip: 8109
+soln val 1: 8117
+
+j info : 741 delta : 5
+before flip: 8109
+after flip: 8114
+soln val 1: 8122
+
+j info : 98 delta : 2
+before flip: 8114
+after flip: 8116
+soln val 1: 8124
+
+j info : 466 delta : 9
+before flip: 8116
+after flip: 8125
+soln val 1: 8133
+
+j info : 441 delta : 3
+before flip: 8125
+after flip: 8128
+soln val 1: 8136
+
+j info : 939 delta : 4
+before flip: 8128
+after flip: 8132
+soln val 1: 8140
+
+j info : 677 delta : 12
+before flip: 8132
+after flip: 8144
+soln val 1: 8152
+
+j info : 132 delta : 14
+before flip: 8144
+after flip: 8158
+soln val 1: 8166
+
+j info : 651 delta : 1
+before flip: 8158
+after flip: 8159
+soln val 1: 8167
+
+j info : 657 delta : 1
+before flip: 8159
+after flip: 8160
+soln val 1: 8168
+
+j info : 235 delta : 13
+before flip: 8160
+after flip: 8173
+soln val 1: 8181
+
+j info : 680 delta : 2
+before flip: 8173
+after flip: 8175
+soln val 1: 8183
+
+j info : 558 delta : 7
+before flip: 8175
+after flip: 8182
+soln val 1: 8190
+
+j info : 586 delta : 4
+before flip: 8182
+after flip: 8186
+soln val 1: 8194
+
+j info : 756 delta : 9
+before flip: 8186
+after flip: 8195
+soln val 1: 8203
+
+j info : 389 delta : 4
+before flip: 8195
+after flip: 8199
+soln val 1: 8207
+
+j info : 187 delta : 4
+before flip: 8199
+after flip: 8203
+soln val 1: 8211
+
+j info : 612 delta : 10
+before flip: 8203
+after flip: 8213
+soln val 1: 8221
+
+j info : 736 delta : 2
+before flip: 8213
+after flip: 8215
+soln val 1: 8223
+
+j info : 776 delta : 1
+before flip: 8215
+after flip: 8216
+soln val 1: 8224
+
+j info : 431 delta : 1
+before flip: 8216
+after flip: 8217
+soln val 1: 8225
+
+j info : 16 delta : 3
+before flip: 8217
+after flip: 8220
+soln val 1: 8228
+
+j info : 182 delta : 5
+before flip: 8220
+after flip: 8225
+soln val 1: 8233
+
+j info : 551 delta : 5
+before flip: 8225
+after flip: 8230
+soln val 1: 8238
+
+j info : 822 delta : 4
+before flip: 8230
+after flip: 8234
+soln val 1: 8242
+
+j info : 575 delta : 4
+before flip: 8234
+after flip: 8238
+soln val 1: 8246
+
+j info : 108 delta : 6
+before flip: 8238
+after flip: 8244
+soln val 1: 8252
+
+j info : 394 delta : 2
+before flip: 8244
+after flip: 8246
+soln val 1: 8254
+
+j info : 137 delta : 2
+before flip: 8246
+after flip: 8248
+soln val 1: 8256
+
+j info : 743 delta : 3
+before flip: 8248
+after flip: 8251
+soln val 1: 8259
+
+j info : 565 delta : 2
+before flip: 8251
+after flip: 8253
+soln val 1: 8261
+
+j info : 542 delta : 11
+before flip: 8253
+after flip: 8264
+soln val 1: 8272
+
+j info : 190 delta : 5
+before flip: 8264
+after flip: 8269
+soln val 1: 8277
+c value: 8269
+soln val 2: 8277
+
+j info : 173 delta : 1
+before flip: 8269
+after flip: 8270
+soln val 1: 8278
+
+j info : 172 delta : 2
+before flip: 8270
+after flip: 8272
+soln val 1: 8280
+
+j info : 273 delta : 9
+before flip: 8272
+after flip: 8281
+soln val 1: 8289
+
+j info : 57 delta : 2
+before flip: 8281
+after flip: 8283
+soln val 1: 8291
+
+j info : 526 delta : 12
+before flip: 8283
+after flip: 8295
+soln val 1: 8303
+
+j info : 390 delta : 11
+before flip: 8295
+after flip: 8306
+soln val 1: 8314
+
+j info : 216 delta : 4
+before flip: 8306
+after flip: 8310
+soln val 1: 8318
+
+j info : 545 delta : 1
+before flip: 8310
+after flip: 8311
+soln val 1: 8319
+
+j info : 32 delta : 8
+before flip: 8311
+after flip: 8319
+soln val 1: 8327
+
+j info : 107 delta : 2
+before flip: 8319
+after flip: 8321
+soln val 1: 8329
+
+j info : 500 delta : 4
+before flip: 8321
+after flip: 8325
+soln val 1: 8333
+
+j info : 5 delta : 6
+before flip: 8325
+after flip: 8331
+soln val 1: 8339
+
+j info : 281 delta : 1
+before flip: 8331
+after flip: 8332
+soln val 1: 8340
+
+j info : 621 delta : 2
+before flip: 8332
+after flip: 8334
+soln val 1: 8342
+
+j info : 985 delta : 11
+before flip: 8334
+after flip: 8345
+soln val 1: 8353
+
+j info : 750 delta : 2
+before flip: 8345
+after flip: 8347
+soln val 1: 8355
+
+j info : 424 delta : 10
+before flip: 8347
+after flip: 8357
+soln val 1: 8365
+
+j info : 607 delta : 3
+before flip: 8357
+after flip: 8360
+soln val 1: 8368
+
+j info : 641 delta : 7
+before flip: 8360
+after flip: 8367
+soln val 1: 8375
+
+j info : 911 delta : 1
+before flip: 8367
+after flip: 8368
+soln val 1: 8376
+
+j info : 839 delta : 1
+before flip: 8368
+after flip: 8369
+soln val 1: 8377
+
+j info : 478 delta : 8
+before flip: 8369
+after flip: 8377
+soln val 1: 8385
+
+j info : 268 delta : 1
+before flip: 8377
+after flip: 8378
+soln val 1: 8386
+
+j info : 89 delta : 1
+before flip: 8378
+after flip: 8379
+soln val 1: 8387
+
+j info : 195 delta : 1
+before flip: 8379
+after flip: 8380
+soln val 1: 8388
+
+j info : 785 delta : 5
+before flip: 8380
+after flip: 8385
+soln val 1: 8393
+
+j info : 714 delta : 4
+before flip: 8385
+after flip: 8389
+soln val 1: 8397
+
+j info : 823 delta : 2
+before flip: 8389
+after flip: 8391
+soln val 1: 8399
+
+j info : 535 delta : 1
+before flip: 8391
+after flip: 8392
+soln val 1: 8400
+
+j info : 392 delta : 2
+before flip: 8392
+after flip: 8394
+soln val 1: 8402
+
+j info : 509 delta : 1
+before flip: 8394
+after flip: 8395
+soln val 1: 8403
+
+j info : 739 delta : 5
+before flip: 8395
+after flip: 8400
+soln val 1: 8408
+
+j info : 335 delta : 5
+before flip: 8400
+after flip: 8405
+soln val 1: 8413
+
+j info : 455 delta : 4
+before flip: 8405
+after flip: 8409
+soln val 1: 8417
+
+j info : 365 delta : 1
+before flip: 8409
+after flip: 8410
+soln val 1: 8418
+
+j info : 668 delta : 12
+before flip: 8410
+after flip: 8422
+soln val 1: 8430
+
+j info : 110 delta : 5
+before flip: 8422
+after flip: 8427
+soln val 1: 8435
+
+j info : 842 delta : 3
+before flip: 8427
+after flip: 8430
+soln val 1: 8438
+
+j info : 213 delta : 7
+before flip: 8430
+after flip: 8437
+soln val 1: 8445
+
+j info : 401 delta : 8
+before flip: 8437
+after flip: 8445
+soln val 1: 8453
+
+j info : 438 delta : 4
+before flip: 8445
+after flip: 8449
+soln val 1: 8457
+
+j info : 838 delta : 1
+before flip: 8449
+after flip: 8450
+soln val 1: 8458
+
+j info : 788 delta : 1
+before flip: 8450
+after flip: 8451
+soln val 1: 8459
+
+j info : 12 delta : 4
+before flip: 8451
+after flip: 8455
+soln val 1: 8463
+
+j info : 695 delta : 2
+before flip: 8455
+after flip: 8457
+soln val 1: 8465
+
+j info : 73 delta : 1
+before flip: 8457
+after flip: 8458
+soln val 1: 8466
+
+j info : 287 delta : 3
+before flip: 8458
+after flip: 8461
+soln val 1: 8469
+
+j info : 328 delta : 3
+before flip: 8461
+after flip: 8464
+soln val 1: 8472
+
+j info : 773 delta : 1
+before flip: 8464
+after flip: 8465
+soln val 1: 8473
+
+j info : 815 delta : 1
+before flip: 8465
+after flip: 8466
+soln val 1: 8474
+
+j info : 124 delta : 6
+before flip: 8466
+after flip: 8472
+soln val 1: 8480
+
+j info : 874 delta : 3
+before flip: 8472
+after flip: 8475
+soln val 1: 8483
+
+j info : 348 delta : 1
+before flip: 8475
+after flip: 8476
+soln val 1: 8484
+
+j info : 477 delta : 6
+before flip: 8476
+after flip: 8482
+soln val 1: 8490
+
+j info : 70 delta : 11
+before flip: 8482
+after flip: 8493
+soln val 1: 8501
+
+j info : 507 delta : 1
+before flip: 8493
+after flip: 8494
+soln val 1: 8502
+
+j info : 889 delta : 2
+before flip: 8494
+after flip: 8496
+soln val 1: 8504
+
+j info : 427 delta : 1
+before flip: 8496
+after flip: 8497
+soln val 1: 8505
+
+j info : 51 delta : 3
+before flip: 8497
+after flip: 8500
+soln val 1: 8508
+
+j info : 769 delta : 3
+before flip: 8500
+after flip: 8503
+soln val 1: 8511
+
+j info : 533 delta : 1
+before flip: 8503
+after flip: 8504
+soln val 1: 8512
+
+j info : 863 delta : 2
+before flip: 8504
+after flip: 8506
+soln val 1: 8514
+
+j info : 86 delta : 1
+before flip: 8506
+after flip: 8507
+soln val 1: 8515
+
+j info : 142 delta : 5
+before flip: 8507
+after flip: 8512
+soln val 1: 8520
+
+j info : 492 delta : 4
+before flip: 8512
+after flip: 8516
+soln val 1: 8524
+
+j info : 672 delta : 7
+before flip: 8516
+after flip: 8523
+soln val 1: 8531
+
+j info : 249 delta : 9
+before flip: 8523
+after flip: 8532
+soln val 1: 8540
+
+j info : 725 delta : 10
+before flip: 8532
+after flip: 8542
+soln val 1: 8550
+
+j info : 143 delta : 12
+before flip: 8542
+after flip: 8554
+soln val 1: 8562
+
+j info : 715 delta : 1
+before flip: 8554
+after flip: 8555
+soln val 1: 8563
+
+j info : 966 delta : 2
+before flip: 8555
+after flip: 8557
+soln val 1: 8565
+
+j info : 346 delta : 5
+before flip: 8557
+after flip: 8562
+soln val 1: 8570
+
+j info : 116 delta : 3
+before flip: 8562
+after flip: 8565
+soln val 1: 8573
+
+j info : 508 delta : 2
+before flip: 8565
+after flip: 8567
+soln val 1: 8575
+
+j info : 831 delta : 1
+before flip: 8567
+after flip: 8568
+soln val 1: 8576
+
+j info : 980 delta : 1
+before flip: 8568
+after flip: 8569
+soln val 1: 8577
+
+j info : 82 delta : 2
+before flip: 8569
+after flip: 8571
+soln val 1: 8579
+
+j info : 112 delta : 1
+before flip: 8571
+after flip: 8572
+soln val 1: 8580
+
+j info : 602 delta : 2
+before flip: 8572
+after flip: 8574
+soln val 1: 8582
+
+j info : 955 delta : 2
+before flip: 8574
+after flip: 8576
+soln val 1: 8584
+
+j info : 809 delta : 6
+before flip: 8576
+after flip: 8582
+soln val 1: 8590
+
+j info : 880 delta : 8
+before flip: 8582
+after flip: 8590
+soln val 1: 8598
+
+j info : 297 delta : 10
+before flip: 8590
+after flip: 8600
+soln val 1: 8608
+
+j info : 884 delta : 1
+before flip: 8600
+after flip: 8601
+soln val 1: 8609
+
+j info : 922 delta : 1
+before flip: 8601
+after flip: 8602
+soln val 1: 8610
+
+j info : 48 delta : 7
+before flip: 8602
+after flip: 8609
+soln val 1: 8617
+
+j info : 85 delta : 2
+before flip: 8609
+after flip: 8611
+soln val 1: 8619
+
+j info : 988 delta : 6
+before flip: 8611
+after flip: 8617
+soln val 1: 8625
+
+j info : 135 delta : 1
+before flip: 8617
+after flip: 8618
+soln val 1: 8626
+
+j info : 539 delta : 4
+before flip: 8618
+after flip: 8622
+soln val 1: 8630
+
+j info : 165 delta : 3
+before flip: 8622
+after flip: 8625
+soln val 1: 8633
+
+j info : 856 delta : 1
+before flip: 8625
+after flip: 8626
+soln val 1: 8634
+
+j info : 481 delta : 2
+before flip: 8626
+after flip: 8628
+soln val 1: 8636
+
+j info : 968 delta : 3
+before flip: 8628
+after flip: 8631
+soln val 1: 8639
+
+j info : 950 delta : 1
+before flip: 8631
+after flip: 8632
+soln val 1: 8640
+
+j info : 921 delta : 2
+before flip: 8632
+after flip: 8634
+soln val 1: 8642
+
+j info : 939 delta : 4
+before flip: 8634
+after flip: 8638
+soln val 1: 8646
+
+j info : 858 delta : 2
+before flip: 8638
+after flip: 8640
+soln val 1: 8648
+
+j info : 855 delta : 1
+before flip: 8640
+after flip: 8641
+soln val 1: 8649
+
+j info : 101 delta : 1
+before flip: 8641
+after flip: 8642
+soln val 1: 8650
+
+j info : 463 delta : 2
+before flip: 8642
+after flip: 8644
+soln val 1: 8652
+
+j info : 58 delta : 2
+before flip: 8644
+after flip: 8646
+soln val 1: 8654
+
+j info : 999 delta : 4
+before flip: 8646
+after flip: 8650
+soln val 1: 8658
+
+j info : 834 delta : 1
+before flip: 8650
+after flip: 8651
+soln val 1: 8659
+
+j info : 160 delta : 2
+before flip: 8651
+after flip: 8653
+soln val 1: 8661
+
+j info : 531 delta : 1
+before flip: 8653
+after flip: 8654
+soln val 1: 8662
+
+j info : 734 delta : 13
+before flip: 8654
+after flip: 8667
+soln val 1: 8675
+
+j info : 498 delta : 3
+before flip: 8667
+after flip: 8670
+soln val 1: 8678
+
+j info : 377 delta : 1
+before flip: 8670
+after flip: 8671
+soln val 1: 8679
+
+j info : 524 delta : 7
+before flip: 8671
+after flip: 8678
+soln val 1: 8686
+c value: 8678
+soln val 2: 8686
+
+j info : 803 delta : 2
+before flip: 8678
+after flip: 8680
+soln val 1: 8688
+
+j info : 663 delta : 4
+before flip: 8680
+after flip: 8684
+soln val 1: 8692
+
+j info : 485 delta : 3
+before flip: 8684
+after flip: 8687
+soln val 1: 8695
+
+j info : 692 delta : 1
+before flip: 8687
+after flip: 8688
+soln val 1: 8696
+
+j info : 625 delta : 1
+before flip: 8688
+after flip: 8689
+soln val 1: 8697
+
+j info : 437 delta : 1
+before flip: 8689
+after flip: 8690
+soln val 1: 8698
+
+j info : 750 delta : 2
+before flip: 8690
+after flip: 8692
+soln val 1: 8700
+
+j info : 486 delta : 3
+before flip: 8692
+after flip: 8695
+soln val 1: 8703
+
+j info : 305 delta : 11
+before flip: 8695
+after flip: 8706
+soln val 1: 8714
+
+j info : 469 delta : 6
+before flip: 8706
+after flip: 8712
+soln val 1: 8720
+
+j info : 535 delta : 3
+before flip: 8712
+after flip: 8715
+soln val 1: 8723
+
+j info : 71 delta : 3
+before flip: 8715
+after flip: 8718
+soln val 1: 8726
+
+j info : 254 delta : 2
+before flip: 8718
+after flip: 8720
+soln val 1: 8728
+
+j info : 986 delta : 2
+before flip: 8720
+after flip: 8722
+soln val 1: 8730
+
+j info : 841 delta : 2
+before flip: 8722
+after flip: 8724
+soln val 1: 8732
+
+j info : 686 delta : 4
+before flip: 8724
+after flip: 8728
+soln val 1: 8736
+
+j info : 567 delta : 1
+before flip: 8728
+after flip: 8729
+soln val 1: 8737
+
+j info : 853 delta : 2
+before flip: 8729
+after flip: 8731
+soln val 1: 8739
+
+j info : 832 delta : 4
+before flip: 8731
+after flip: 8735
+soln val 1: 8743
+
+j info : 521 delta : 3
+before flip: 8735
+after flip: 8738
+soln val 1: 8746
+
+j info : 847 delta : 1
+before flip: 8738
+after flip: 8739
+soln val 1: 8747
+
+j info : 900 delta : 4
+before flip: 8739
+after flip: 8743
+soln val 1: 8751
+
+j info : 532 delta : 2
+before flip: 8743
+after flip: 8745
+soln val 1: 8753
+
+j info : 380 delta : 3
+before flip: 8745
+after flip: 8748
+soln val 1: 8756
+
+j info : 727 delta : 1
+before flip: 8748
+after flip: 8749
+soln val 1: 8757
+
+j info : 360 delta : 1
+before flip: 8749
+after flip: 8750
+soln val 1: 8758
+
+j info : 316 delta : 1
+before flip: 8750
+after flip: 8751
+soln val 1: 8759
+
+j info : 948 delta : 7
+before flip: 8751
+after flip: 8758
+soln val 1: 8766
+
+j info : 904 delta : 2
+before flip: 8758
+after flip: 8760
+soln val 1: 8768
+
+j info : 596 delta : 2
+before flip: 8760
+after flip: 8762
+soln val 1: 8770
+
+j info : 306 delta : 2
+before flip: 8762
+after flip: 8764
+soln val 1: 8772
+
+j info : 208 delta : 1
+before flip: 8764
+after flip: 8765
+soln val 1: 8773
+
+j info : 769 delta : 3
+before flip: 8765
+after flip: 8768
+soln val 1: 8776
+
+j info : 752 delta : 2
+before flip: 8768
+after flip: 8770
+soln val 1: 8778
+
+j info : 726 delta : 2
+before flip: 8770
+after flip: 8772
+soln val 1: 8780
+
+j info : 942 delta : 9
+before flip: 8772
+after flip: 8781
+soln val 1: 8789
+
+j info : 516 delta : 3
+before flip: 8781
+after flip: 8784
+soln val 1: 8792
+
+j info : 926 delta : 11
+before flip: 8784
+after flip: 8795
+soln val 1: 8803
+
+j info : 701 delta : 3
+before flip: 8795
+after flip: 8798
+soln val 1: 8806
+
+j info : 789 delta : 10
+before flip: 8798
+after flip: 8808
+soln val 1: 8816
+
+j info : 891 delta : 2
+before flip: 8808
+after flip: 8810
+soln val 1: 8818
+
+j info : 64 delta : 4
+before flip: 8810
+after flip: 8814
+soln val 1: 8822
+
+j info : 93 delta : 8
+before flip: 8814
+after flip: 8822
+soln val 1: 8830
+
+j info : 648 delta : 2
+before flip: 8822
+after flip: 8824
+soln val 1: 8832
+
+j info : 552 delta : 4
+before flip: 8824
+after flip: 8828
+soln val 1: 8836
+
+j info : 852 delta : 1
+before flip: 8828
+after flip: 8829
+soln val 1: 8837
+
+j info : 959 delta : 4
+before flip: 8829
+after flip: 8833
+soln val 1: 8841
+
+j info : 675 delta : 4
+before flip: 8833
+after flip: 8837
+soln val 1: 8845
+
+j info : 192 delta : 4
+before flip: 8837
+after flip: 8841
+soln val 1: 8849
+
+j info : 313 delta : 3
+before flip: 8841
+after flip: 8844
+soln val 1: 8852
+
+j info : 384 delta : 2
+before flip: 8844
+after flip: 8846
+soln val 1: 8854
+
+j info : 749 delta : 5
+before flip: 8846
+after flip: 8851
+soln val 1: 8859
+c value: 8851
+soln val 2: 8859
+
+j info : 114 delta : 1
+before flip: 8851
+after flip: 8852
+soln val 1: 8860
+
+j info : 744 delta : 6
+before flip: 8852
+after flip: 8858
+soln val 1: 8866
+
+j info : 814 delta : 2
+before flip: 8858
+after flip: 8860
+soln val 1: 8868
+
+j info : 500 delta : 2
+before flip: 8860
+after flip: 8862
+soln val 1: 8870
+
+j info : 547 delta : 5
+before flip: 8862
+after flip: 8867
+soln val 1: 8875
+
+j info : 356 delta : 3
+before flip: 8867
+after flip: 8870
+soln val 1: 8878
+
+j info : 912 delta : 3
+before flip: 8870
+after flip: 8873
+soln val 1: 8881
+
+j info : 853 delta : 4
+before flip: 8873
+after flip: 8877
+soln val 1: 8885
+
+j info : 181 delta : 4
+before flip: 8877
+after flip: 8881
+soln val 1: 8889
+
+j info : 92 delta : 1
+before flip: 8881
+after flip: 8882
+soln val 1: 8890
+
+j info : 897 delta : 3
+before flip: 8882
+after flip: 8885
+soln val 1: 8893
+
+j info : 159 delta : 1
+before flip: 8885
+after flip: 8886
+soln val 1: 8894
+
+j info : 978 delta : 2
+before flip: 8886
+after flip: 8888
+soln val 1: 8896
+
+j info : 136 delta : 4
+before flip: 8888
+after flip: 8892
+soln val 1: 8900
+
+j info : 238 delta : 1
+before flip: 8892
+after flip: 8893
+soln val 1: 8901
+
+j info : 849 delta : 1
+before flip: 8893
+after flip: 8894
+soln val 1: 8902
+
+j info : 138 delta : 1
+before flip: 8894
+after flip: 8895
+soln val 1: 8903
+
+j info : 353 delta : 1
+before flip: 8895
+after flip: 8896
+soln val 1: 8904
+
+j info : 396 delta : 1
+before flip: 8896
+after flip: 8897
+soln val 1: 8905
+c value: 8897
+soln val 2: 8905
+
+j info : 18 delta : 3
+before flip: 8897
+after flip: 8900
+soln val 1: 8908
+
+j info : 267 delta : 3
+before flip: 8900
+after flip: 8903
+soln val 1: 8911
+
+j info : 873 delta : 1
+before flip: 8903
+after flip: 8904
+soln val 1: 8912
+
+j info : 765 delta : 3
+before flip: 8904
+after flip: 8907
+soln val 1: 8915
+
+j info : 34 delta : 2
+before flip: 8907
+after flip: 8909
+soln val 1: 8917
+
+j info : 180 delta : 3
+before flip: 8909
+after flip: 8912
+soln val 1: 8920
+
+j info : 980 delta : 1
+before flip: 8912
+after flip: 8913
+soln val 1: 8921
+
+j info : 182 delta : 1
+before flip: 8913
+after flip: 8914
+soln val 1: 8922
+c value: 8914
+soln val 2: 8922
+
+j info : 482 delta : 1
+before flip: 8914
+after flip: 8915
+soln val 1: 8923
+
+j info : 864 delta : 1
+before flip: 8915
+after flip: 8916
+soln val 1: 8924
+
+j info : 328 delta : 3
+before flip: 8916
+after flip: 8919
+soln val 1: 8927
+
+j info : 723 delta : 3
+before flip: 8919
+after flip: 8922
+soln val 1: 8930
+
+j info : 592 delta : 2
+before flip: 8922
+after flip: 8924
+soln val 1: 8932
+c value: 8924
+soln val 2: 8932
+
+j info : 226 delta : 1
+before flip: 8924
+after flip: 8925
+soln val 1: 8933
+
+j info : 826 delta : 3
+before flip: 8925
+after flip: 8928
+soln val 1: 8936
+
+j info : 558 delta : 3
+before flip: 8928
+after flip: 8931
+soln val 1: 8939
+c value: 8931
+soln val 2: 8939
+
+j info : 850 delta : 3
+before flip: 8931
+after flip: 8934
+soln val 1: 8942
+
+j info : 513 delta : 3
+before flip: 8934
+after flip: 8937
+soln val 1: 8945
+c value: 8937
+soln val 2: 8945
+c value: 8937
+soln val 2: 8945
+before_opt: 6290
+delta : 2647
+after_opt: 8937
+after_opt soln: 8945
+aaaaaaaaa: 6314
+soln : 6306

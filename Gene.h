@@ -20,7 +20,7 @@ public:
     int calc_soln_value_new(Graph gh, vector<bool> new_gene);
     int get_soln_value() const;
     vector<bool> get_gene();
-    Gene mutate();
+    Gene mutate(Graph gh);
     Gene local_opt(Graph gh);
     int get_delta(Graph gh, vector<bool> gee, int pos);
 };

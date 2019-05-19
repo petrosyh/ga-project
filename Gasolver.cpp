@@ -189,15 +189,37 @@ Gene Gasolver::gas_merge() {
     return ret;
 }
 
+int calc_aux(Graph gh, vector<bool> new_gene) {
+    int val = 0;
+    int fst_vtx = 0;
+    int snd_vtx = 0;
+    vector<pair<pair<int, int>, int>> edges = gh.get_edges();
+    for (auto iter: edges) {
+        fst_vtx = iter.first.first;
+        snd_vtx = iter.first.second;
+        if (new_gene[fst_vtx-1] != new_gene[snd_vtx-1]) {
+            val = val + iter.second;
+        }
+    }
+    return val;
+}
+
+
 Gasolver Gasolver::generation(int child) {
     vector<int> values;
-    vector<Gene> new_children;
-    int minstate;
+    // vector<Gene> new_children;
+    // int minstate;
     Gene g;
-    
+
+    // cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
+    // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
     sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
-      gene_vector[j] = gas_merge().mutate();
+      gene_vector[j] = gas_merge().mutate(own_graph);
+      // if (j ==0) {
+      // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
+      // 	cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
+      // }
       //gene_vector[j] = gas_roulette_merge().mutate();
       // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
       // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();
