@@ -21,6 +21,7 @@ public:
     int get_soln_value() const;
     vector<bool> get_gene();
     Gene mutate();
-    void local_opt(Graph gh);
+    Gene local_opt(Graph gh);
+    int get_delta(Graph gh, vector<bool> gee, int pos);
 };
 bool operator<(const Gene &s1, const Gene &s2);

@@ -150,23 +150,16 @@ Gasolver Gasolver::generation(int child) {
     vector<Gene> new_children;
     int minstate;
     Gene g;
-    //cout << "here0" << endl;
-    for (int i = 0; i < child; i++) {
-        values = get_all_value();
-        //cout << "here1" << endl;
-        minstate = minwhere(values);
-        //cout << "here2" << endl;
-        g = gas_merge().mutate();
-	g.local_opt(own_graph);
-        //cout << "here3  " << minstate << endl;
-        gene_vector[minstate] = g;
-    }
-
     
     sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
       gene_vector[j] = gas_merge().mutate();
-      gene_vector[j].local_opt(own_graph);
+      // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
+      gene_vector[j] = gene_vector[j].local_opt(own_graph);
+      // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();
+      // cout << "after local opt : " << after_val << endl;
+      // cout << "local opt check : " << gene_vector[j].get_soln_value() << endl;
+      // cout << "check : " << (after_val == gene_vector[j].get_soln_value()) << endl;
     }
     //cout << "here2" << endl;
     

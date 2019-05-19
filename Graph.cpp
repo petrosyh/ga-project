@@ -7,8 +7,8 @@ Graph::Graph(int vn, int en, vector<pair<pair<int, int>, int>> we) {
 }
 
 Graph::Graph () {
-  vtx_num = 500;
-  edge_num = 5000;
+  vtx_num = 1000;
+  edge_num = 10000;
 }
 
 int Graph::get_vtx_num () {

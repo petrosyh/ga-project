@@ -86,10 +86,37 @@ vector<bool> Gene::get_gene() {
     return gene;
 }
 
-void Gene::local_opt(Graph gh) {
+int Gene::get_delta(Graph gh, vector<bool> gee, int pos) {
+  vector<pair<pair<int, int>, int>> edges = gh.get_edges();
+  int delta = 0;
+  bool pos_bool = gee[pos];
+
+  for (auto iter: edges) {
+    if (iter.first.first == pos && iter.first.second != pos) {
+      if (pos_bool != gee[iter.first.second]) {
+	delta = delta - iter.second;
+      }
+      else if (pos_bool == gee[iter.first.second]) {
+	delta = delta + iter.second;
+      }
+    } else if (iter.first.second == pos && iter.first.first != pos) {
+      if (pos_bool != gee[iter.first.first]) {
+	delta = delta - iter.second;
+      }
+      else if (pos_bool == gee[iter.first.first]) {
+	delta = delta + iter.second;
+      }
+      
+    }
+  }
+  return delta;  
+}
+
+Gene Gene::local_opt(Graph gh) {
   vector<int> rperm;
   bool imp = true;
   int delta = 0;
+  int delta_sum = 0;
   int size = gene.size();
   vector<bool> filped_vector = gene;
   
@@ -97,19 +124,42 @@ void Gene::local_opt(Graph gh) {
     rperm.push_back(i);
   }
   random_shuffle (rperm.begin(), rperm.end());
-
+  int aaaa = calc_soln_value_new(gh, gene);
+  int i = 0;
   while (imp) {
     imp = false;
     for (auto j: rperm) {
+      //cout << "before: " << filped_vector[j] <<endl;
+      filped_vector = gene;
       filped_vector[j] = !filped_vector[j];
-      delta = calc_soln_value_new(gh, filped_vector);
+      //cout << "after: " << filped_vector[j] <<endl;
+      int fliped = calc_soln_value_new(gh, filped_vector);
+      delta = fliped - soln_value;
+      //cout << "delta : " << delta << endl; 
+      //get_delta(gh, gene, j);
       if (delta > 0) {
+	delta_sum = delta_sum + delta;
+	//cout << "before flip: " << soln_value << endl;
 	gene[j] = !gene[j];
+	//soln_value = calc_soln_value_new(gh, gene);
+	//cout << "after flip: " << soln_value << endl;
 	soln_value = soln_value + delta;
 	imp = true;
       }
     }
   }
+  int bbbb = calc_soln_value_new(gh, gene);
+
+  // if (bbbb>aaaa) {
+  //   cout << "before_opt: " << aaaa << endl;
+  //   cout << "delta : " << bbbb - aaaa << endl;
+  //   cout << "after_opt: " << bbbb << endl;
+  //   cout << "after_opt: " << soln_value << endl;
+  // }
+  assert (bbbb>=aaaa);
+
+  //  int after_val = calc_soln_value_new(gh, gene);
+  return *this;
 }
 
 Gene::Gene() {
