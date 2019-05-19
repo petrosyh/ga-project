@@ -20,6 +20,7 @@ public:
     Gasolver();
     vector<Gene> get_gene_vector();
     Gene gas_merge();
+    Gene gas_roulette_merge();
     pair<Gene, int> selection();
     pair<Gene, int> roulette_selection();
     Gasolver generation(int child);

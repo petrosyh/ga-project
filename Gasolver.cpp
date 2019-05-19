@@ -105,16 +105,37 @@ pair<Gene, int> Gasolver::roulette_selection() {
     return make_pair(gene_vector[size - 1], size - 1);
 }
 
-Gene Gasolver::gas_merge() {
-    //pair<Gene, int> sel1 = selection();
-    //pair<Gene, int> sel2 = selection();
-    //pair<Gene, int> sel3 = selection();
-    //pair<Gene, int> sel4 = selection();
-    
+Gene Gasolver::gas_roulette_merge() {
     pair<Gene, int> sel1 = roulette_selection();
     pair<Gene, int> sel2 = roulette_selection();
-    pair<Gene, int> sel3 = roulette_selection();
-    pair<Gene, int> sel4 = roulette_selection();
+
+    Gene g1 = sel1.first;
+    Gene g2 = sel2.first;
+
+    int ith_1 = sel1.second;
+    int ith_2 = sel2.second;
+
+    int gene_size = g1.get_gene().size();
+    
+    vector<bool> new_gene1;
+    Gene ret;
+
+    for (int i = 0; i < gene_size; i++) {
+        if (i % 2 == 0) {
+            new_gene1.push_back(gene_vector[ith_1].get_gene()[i]);
+        } else {
+            new_gene1.push_back(gene_vector[ith_2].get_gene()[i]);
+        }
+    }
+    ret = Gene(own_graph, new_gene1);
+
+    return ret;
+}
+Gene Gasolver::gas_merge() {
+    pair<Gene, int> sel1 = selection();
+    pair<Gene, int> sel2 = selection();
+    pair<Gene, int> sel3 = selection();
+    pair<Gene, int> sel4 = selection();
     
     Gene g1 = sel1.first;
     Gene g2 = sel2.first;
@@ -177,6 +198,7 @@ Gasolver Gasolver::generation(int child) {
     sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
       gene_vector[j] = gas_merge().mutate();
+      //gene_vector[j] = gas_roulette_merge().mutate();
       // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
       gene_vector[j] = gene_vector[j].local_opt(own_graph);
       // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();

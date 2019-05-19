@@ -11,7 +11,7 @@ using namespace std;
 
 #define INITIAL 1000
 #define ITERTIME 173000
-#define CHILDNUM 50
+#define CHILDNUM 15
 
 int main(int argc, char *argv[]) {
   //clock_t start_time = clock();
