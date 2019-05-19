@@ -21,10 +21,13 @@ public:
     vector<Gene> get_gene_vector();
     Gene gas_merge();
     pair<Gene, int> selection();
+    pair<Gene, int> roulette_selection();
     Gasolver generation(int child);
     int get_gas_size();
     int get_maxcut();
     int get_maxcut_avg();
+    int get_value_sum();
+    vector<int> get_value_acc();
     void print_opt_set();
     vector<int> get_all_value();
     vector<double> fitnesses();

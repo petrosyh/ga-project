@@ -87,11 +87,34 @@ pair<Gene, int> Gasolver::selection() {
     return make_pair(gene_vector[selector], selector);
 }
 
+//assume values are sorted.
+pair<Gene, int> Gasolver::roulette_selection() {
+    int whole_sum = get_value_sum();
+    vector<int> value_acc = get_value_acc();
+    
+    assert(whole_sum == value_acc[size -1]);
+    
+    srand(static_cast<unsigned int>(clock()));
+    int selector = rand()%whole_sum;
+    
+    for (int ith = 0; ith < size; ith ++) {
+        if (selector < value_acc[ith]) {
+            return make_pair(gene_vector[ith], ith);
+        }
+    }
+    return make_pair(gene_vector[size - 1], size - 1);
+}
+
 Gene Gasolver::gas_merge() {
-    pair<Gene, int> sel1 = selection();
-    pair<Gene, int> sel2 = selection();
-    pair<Gene, int> sel3 = selection();
-    pair<Gene, int> sel4 = selection();
+    //pair<Gene, int> sel1 = selection();
+    //pair<Gene, int> sel2 = selection();
+    //pair<Gene, int> sel3 = selection();
+    //pair<Gene, int> sel4 = selection();
+    
+    pair<Gene, int> sel1 = roulette_selection();
+    pair<Gene, int> sel2 = roulette_selection();
+    pair<Gene, int> sel3 = roulette_selection();
+    pair<Gene, int> sel4 = roulette_selection();
     
     Gene g1 = sel1.first;
     Gene g2 = sel2.first;
@@ -176,6 +199,24 @@ vector<int> Gasolver::get_all_value() {
     vector<int> ret;
     for (auto iter : gene_vector) {
         ret.push_back(iter.get_soln_value());
+    }
+    return ret;
+}
+
+int Gasolver::get_value_sum() {
+    int ret = 0;
+    for (auto iter : gene_vector) {
+        ret = ret + iter.get_soln_value();
+    }
+    return ret;
+}
+
+vector<int> Gasolver::get_value_acc() {
+    vector<int> ret;
+    int acc = 0;
+    for (auto iter : gene_vector) {
+        acc = acc + iter.get_soln_value();
+        ret.push_back(acc);
     }
     return ret;
 }
