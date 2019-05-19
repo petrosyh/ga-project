@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
   string filePath = argv[1];  // "maxcut.in";
   int vtxnum, edgenum;
   int v1, v2, weight;
-  // int iteration = 0;
+  int iteration = 0;
   vector<pair<pair<int, int>, int>> we;
   Graph gh;
   Gasolver gas;
@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
 
   do {
     //cout << "Hi " << endl;
-    // iteration ++;
+    iteration ++;
     //cout << "Hi 1" << endl;
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
@@ -77,7 +77,8 @@ int main(int argc, char *argv[]) {
     
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);
 
-  gas.print_opt_set();
+  //gas.print_opt_set();
+  cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
   return 0;
 }
 
