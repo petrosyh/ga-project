@@ -200,18 +200,14 @@ Gasolver Gasolver::generation(int child) {
       gene_vector[j] = gas_merge().mutate();
       //gene_vector[j] = gas_roulette_merge().mutate();
       // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
-      gene_vector[j] = gene_vector[j].local_opt(own_graph);
       // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();
       // cout << "after local opt : " << after_val << endl;
       // cout << "local opt check : " << gene_vector[j].get_soln_value() << endl;
       // cout << "check : " << (after_val == gene_vector[j].get_soln_value()) << endl;
     }
+    gene_vector[0] = gene_vector[0].local_opt(own_graph);
     //cout << "here2" << endl;
     
-    //for (auto iter: gene_vector) {
-    //    cout << iter.get_soln_value() << " ";
-    //}
-    //cout << endl;
     
     
     return *this;

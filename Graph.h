@@ -9,7 +9,6 @@ private:
   int edge_num;
   vector<pair<pair<int, int>, int>> edges; // ((v1, v2), weight)
 
-
 public:
   Graph();
   Graph(int vtx_nam, int edge_num, vector<pair<pair<int, int>, int>> edges);

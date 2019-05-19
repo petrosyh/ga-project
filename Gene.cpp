@@ -116,7 +116,7 @@ Gene Gene::local_opt(Graph gh) {
   vector<int> rperm;
   bool imp = true;
   int delta = 0;
-  int delta_sum = 0;
+  //int delta_sum = 0;
   int size = gene.size();
   vector<bool> filped_vector = gene;
   
@@ -124,8 +124,8 @@ Gene Gene::local_opt(Graph gh) {
     rperm.push_back(i);
   }
   random_shuffle (rperm.begin(), rperm.end());
-  int aaaa = calc_soln_value_new(gh, gene);
-  int i = 0;
+  //int aaaa = calc_soln_value_new(gh, gene);
+  // int i = 0;
   while (imp) {
     imp = false;
     for (auto j: rperm) {
@@ -138,7 +138,7 @@ Gene Gene::local_opt(Graph gh) {
       //cout << "delta : " << delta << endl; 
       //get_delta(gh, gene, j);
       if (delta > 0) {
-	delta_sum = delta_sum + delta;
+	//delta_sum = delta_sum + delta;
 	//cout << "before flip: " << soln_value << endl;
 	gene[j] = !gene[j];
 	//soln_value = calc_soln_value_new(gh, gene);
@@ -148,7 +148,7 @@ Gene Gene::local_opt(Graph gh) {
       }
     }
   }
-  int bbbb = calc_soln_value_new(gh, gene);
+  //int bbbb = calc_soln_value_new(gh, gene);
 
   // if (bbbb>aaaa) {
   //   cout << "before_opt: " << aaaa << endl;
@@ -156,7 +156,7 @@ Gene Gene::local_opt(Graph gh) {
   //   cout << "after_opt: " << bbbb << endl;
   //   cout << "after_opt: " << soln_value << endl;
   // }
-  assert (bbbb>=aaaa);
+  //assert (bbbb>=aaaa);
 
   //  int after_val = calc_soln_value_new(gh, gene);
   return *this;
