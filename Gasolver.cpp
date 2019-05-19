@@ -213,9 +213,8 @@ Gasolver Gasolver::generation(int child) {
 
     // cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
     // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
-    sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
-      gene_vector[j] = gas_merge().mutate(own_graph);
+      // gene_vector[j] = gas_merge().mutate(own_graph);
       // if (j ==0) {
       // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
       // 	cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
@@ -226,8 +225,9 @@ Gasolver Gasolver::generation(int child) {
       // cout << "after local opt : " << after_val << endl;
       // cout << "local opt check : " << gene_vector[j].get_soln_value() << endl;
       // cout << "check : " << (after_val == gene_vector[j].get_soln_value()) << endl;
+      gene_vector[j] = gene_vector[j].local_opt(own_graph);
+      cout << j + 1 << "-th cycle" << endl;
     }
-    gene_vector[0] = gene_vector[0].local_opt(own_graph);
     //cout << "here2" << endl;
     
     
@@ -281,6 +281,8 @@ void Gasolver::print_opt_set() {
         if (opt_set[i])
             cout << (i+1) << " ";
     }
+    cout << endl;
+    cout << "opt value : " << gene_vector[max_state].get_soln_value() << endl;
 }
 
 vector<double> Gasolver::fitnesses() {
