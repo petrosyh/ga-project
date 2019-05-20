@@ -31,5 +31,8 @@ public:
     vector<int> get_value_acc();
     void print_opt_set();
     vector<int> get_all_value();
+    double StandardDeviation();
+    double Variance(vector<int> samples);
+
     vector<double> fitnesses();
 };

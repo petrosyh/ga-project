@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);
 
   //gas.print_opt_set();
-  cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
+  cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << ", " << gas.StandardDeviation() << endl;
   return 0;
 }
 
