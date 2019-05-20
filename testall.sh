@@ -1,6 +1,6 @@
 #!/bin/bash
 INPUT_DIR=inputs
-RESULT_DIR=overall_test
+RESULT_DIR=overall_test_roule
 
 mkdir -p $RESULT_DIR
 rm -f $RESULT_DIR/*.result

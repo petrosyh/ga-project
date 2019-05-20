@@ -215,7 +215,7 @@ Gasolver Gasolver::generation(int child) {
     // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
     sort(gene_vector.begin(), gene_vector.end());
     for (int j = 0; j < child; j ++) {
-      gene_vector[j] = gas_merge().mutate(own_graph);
+      gene_vector[j] = gas_roulette_merge().mutate(own_graph);
       // if (j ==0) {
       // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
       // 	cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
