@@ -9,7 +9,7 @@
 
 using namespace std;
 
-#define INITIAL 290
+#define INITIAL 1300
 #define ITERTIME 170000
 
 
