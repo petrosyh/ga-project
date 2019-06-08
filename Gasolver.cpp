@@ -1,6 +1,7 @@
 #include "Gasolver.h"
 
 #define EVOL_PRESSURE 0.7
+#define ROULETTE_K 4
 
 Gasolver::Gasolver(Graph gh, int sz) {
     Gene gene;
@@ -38,7 +39,7 @@ int minwhere(vector<int> values) {
         }
         i++;
     }
-    return j;
+   return j;
 }
 
 int maxval(vector<int> values) {
@@ -88,48 +89,57 @@ int Gasolver::selection() {
     return selector;
 }
 
-//assume values are sorted.
-pair<Gene, int> Gasolver::roulette_selection() {
-    int whole_sum = get_value_sum();
-    vector<int> value_acc = get_value_acc();
-    
-    assert(whole_sum == value_acc[size -1]);
-    
-    srand(static_cast<unsigned int>(clock()));
-    int selector = rand()%whole_sum;
-    
-    for (int ith = 0; ith < size; ith ++) {
-        if (selector < value_acc[ith]) {
-            return make_pair(gene_vector[ith], ith);
-        }
-    }
-    return make_pair(gene_vector[size - 1], size - 1);
+double dRand(double dMin, double dMax) {
+    double d = (double)rand() / RAND_MAX;
+    return dMin + d * (dMax - dMin);
 }
 
+//assume values are sorted.
+int Gasolver::roulette_selection(vector<double> fit, double sum_of_fit) {
+  srand(static_cast<unsigned int>(clock()));
+  double point = dRand(0, sum_of_fit);
+  double sum = 0;
+
+  for (int i = 0; i < size; i ++) {
+    sum = sum + fit[i];
+    if (point < sum)
+      return i;
+  }
+  return size - 1;
+}
+
+
+
 Gene Gasolver::gas_roulette_merge() {
-    pair<Gene, int> sel1 = roulette_selection();
-    pair<Gene, int> sel2 = roulette_selection();
+  // srand(static_cast<unsigned int>(clock()));
+  // vector<double> fitness_vec = fitnesses();
+  // double sum_of_fitnesses = 0;
+  // for (auto& n : fitness_vec)
+  //   sum_of_fitnesses += n;
+  
+  //   pair<Gene, int> sel1 = roulette_selection();
+  //   pair<Gene, int> sel2 = roulette_selection();
 
-    Gene g1 = sel1.first;
-    Gene g2 = sel2.first;
+  //   Gene g1 = sel1.first;
+  //   Gene g2 = sel2.first;
 
-    int ith_1 = sel1.second;
-    int ith_2 = sel2.second;
+  //   int ith_1 = sel1.second;
+  //   int ith_2 = sel2.second;
 
-    int gene_size = g1.get_gene().size();
+  //   int gene_size = g1.get_gene().size();
     
-    vector<bool> new_gene1;
-    Gene ret;
+  //   vector<bool> new_gene1;
+  //   Gene ret;
 
-    for (int i = 0; i < gene_size; i++) {
-        if (i % 2 == 0) {
-            new_gene1.push_back(gene_vector[ith_1].get_gene()[i]);
-        } else {
-            new_gene1.push_back(gene_vector[ith_2].get_gene()[i]);
-        }
-    }
-    ret = Gene(own_graph, new_gene1);
-
+  //   for (int i = 0; i < gene_size; i++) {
+  //       if (i % 2 == 0) {
+  //           new_gene1.push_back(gene_vector[ith_1].get_gene()[i]);
+  //       } else {
+  //           new_gene1.push_back(gene_vector[ith_2].get_gene()[i]);
+  //       }
+  //   }
+  //   ret = Gene(own_graph, new_gene1);
+  Gene ret = Gene();
     return ret;
 }
 
@@ -189,67 +199,81 @@ int calc_aux(Graph gh, vector<bool> new_gene) {
 
 
 Gasolver Gasolver::generation(int child) {
-    vector<int> values;
-    // vector<Gene> new_children;
-    // int minstate;
-    Gene g;
+  vector<int> values;
+  // vector<Gene> new_children;
+  // int minstate;
+  Gene g;
 
-    // cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
-    // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
-    sort(gene_vector.begin(), gene_vector.end());
+  // cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
+  // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
+  sort(gene_vector.begin(), gene_vector.end());
 
-    vector<bool> children[child];
-    vector<Gene> children_gene;
-    for (int i = 0; i < child; i ++) {
-      srand(static_cast<unsigned int>(clock()));
-        int sel1 = selection();
-        int sel2 = selection();
-        int sel3 = selection();
-        int sel4 = selection();
-	// cout << "sel: " << sel1 << ", " << sel2 << ", " << sel3 << ", " << sel4 << endl;
-	// assert (sel1 != sel2);
+  vector<bool> children[child];
+  vector<Gene> children_gene;
+  for (int i = 0; i < child; i ++) {
+    srand(static_cast<unsigned int>(clock()));
+    // vector<double> fitness_vec = fitnesses();
+    // double sum_of_fitnesses = 0;
+    // for (auto& n : fitness_vec) {
+    // 	sum_of_fitnesses += n;
+    // }
 
-        int winner1 = tournament(sel1, sel2);
-        int winner2 = tournament(sel3, sel4);
-	// cout << "win: " << winner1 << ", " << winner2 << endl;
-        children[i] = vector<bool>(gene_vector[sel1].get_gene().size());
-	// cout << "G1: " << gene_vector[winner1].get_gene().size() << ", " << gene_vector[winner2].get_gene().size() << endl;
-	// cout << "G2: " << gene_vector[winner1].get_soln_value() << ", " << gene_vector[winner2].get_soln_value() << endl;
-	// cout << "MCUT: " << get_maxcut() << endl;
-        gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
-	// cout << "merge fin" << endl;
+    // int sel1 = roulette_selection(fitness_vec, sum_of_fitnesses);
+    // int sel2 = roulette_selection(fitness_vec, sum_of_fitnesses);
+    // int sel3 = roulette_selection(fitness_vec, sum_of_fitnesses);
+    // int sel4 = roulette_selection(fitness_vec, sum_of_fitnesses);
 
-	Gene new_gene = Gene(own_graph, children[i]);
-	new_gene = new_gene.mutate(own_graph).local_opt(own_graph);
-        children_gene.push_back(new_gene);
+    int sel1 = selection();
+    int sel2 = selection();
+    int sel3 = selection();
+    int sel4 = selection();
+    // cout << "sel: " << sel1 << ", " << sel2 << ", " << sel3 << ", " << sel4 << endl;
+    // assert (sel1 != sel2);
 
-	// cout << "3" << endl;
+    int winner1 = tournament(sel1, sel2);
+    int winner2 = tournament(sel3, sel4);
+    // cout << "win: " << winner1 << ", " << winner2 << endl;
+    children[i] = vector<bool>(gene_vector[sel1].get_gene().size());
+    // cout << "G1: " << gene_vector[winner1].get_gene().size() << ", " << gene_vector[winner2].get_gene().size() << endl;
+    // cout << "G2: " << gene_vector[winner1].get_soln_value() << ", " << gene_vector[winner2].get_soln_value() << endl;
+    // cout << "MCUT: " << get_maxcut() << endl;
+    gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
+    // cout << "merge fin" << endl;
+
+    Gene new_gene = Gene(own_graph, children[i]);
+    new_gene = new_gene.mutate(own_graph);
+    if (i % 20 == 0) {
+      new_gene = new_gene.local_opt(own_graph);
     }
-    // cout << "4" << endl;
+    children_gene.push_back(new_gene);
 
-    for (int i = 0; i < child; i ++) {
-        gene_vector[i] = children_gene[i];
-    }
+    // cout << "3" << endl;
+  }
+  // cout << "4" << endl;
+
+  for (int i = 0; i < child; i ++) {
+    gene_vector[i] = children_gene[i];
+  }
     
-    /*for (int j = 0; j < child; j ++) {
-      gene_vector[j] = gas_merge().mutate(own_graph);
-      // if (j ==0) {
-      // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
-      // 	cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
-      // }
-      //gene_vector[j] = gas_roulette_merge().mutate();
-      // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
-      // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();
-      // cout << "after local opt : " << after_val << endl;
-      // cout << "local opt check : " << gene_vector[j].get_soln_value() << endl;
-      // cout << "check : " << (after_val == gene_vector[j].get_soln_value()) << endl;
+  /*for (int j = 0; j < child; j ++) {
+    gene_vector[j] = gas_merge().mutate(own_graph);
+    // if (j ==0) {
+    // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
+    // 	cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
+    // }
+    //gene_vector[j] = gas_roulette_merge().mutate();
+    // cout << "before local opt : " << gene_vector[j].get_soln_value() << endl;
+    // int after_val = Gene(own_graph, gene_vector[j].get_gene()).get_soln_value();
+    // cout << "after local opt : " << after_val << endl;
+    // cout << "local opt check : " << gene_vector[j].get_soln_value() << endl;
+    // cout << "check : " << (after_val == gene_vector[j].get_soln_value()) << endl;
     }
     gene_vector[0] = gene_vector[0].local_opt(own_graph);
     //cout << "here2" << endl;
     */
     
     
-    return *this;
+  return *this;
 }
 
 vector<int> Gasolver::get_all_value() {
@@ -329,7 +353,7 @@ vector<double> Gasolver::fitnesses() {
     int max = maxval(values);
     vector<double> ret;
     for (auto iter : gene_vector) {
-        ret.push_back((min - iter.get_soln_value() + min - max)/(size - 1));
+      ret.push_back((min - iter.get_soln_value()) + ((min - max)/(ROULETTE_K - 1)));
     }
     return ret;
 }

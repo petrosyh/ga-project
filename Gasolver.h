@@ -22,7 +22,7 @@ public:
     Gene gas_merge();
     Gene gas_roulette_merge();
     int selection();
-    pair<Gene, int> roulette_selection();
+    int roulette_selection(vector<double> fit, double sum_of_fit);
     Gasolver generation(int child);
     int get_gas_size();
     int get_maxcut();

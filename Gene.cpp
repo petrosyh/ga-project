@@ -95,20 +95,20 @@ vector<bool> Gene::get_gene() {
     return gene;
 }
 
-int Gene::get_delta(Graph gh, vector<bool> gee, int pos) {
-  auto rel_edges = gh.get_rel_edges();
-  auto pos_rel_edges = rel_edges[pos - 1];
+int Gene::get_delta(vector<vector<pair<int, int>>> rel_edges, vector<bool> gee, int pos) {
+  int flip_pos = pos - 1;
+  auto pos_rel_edges = rel_edges[flip_pos];
 
   //cout << "rel_edge_size: " << pos_rel_edges.size() << endl;
 
   int delta = 0;
-  pair<int, int> edge;
+  int rel_vol;
   int weight;
   
   for (auto iter: pos_rel_edges) {
-    edge = iter.first;
-     weight = iter.second;
-    if (gee[edge.first] == gee[edge.second])
+    rel_vol = iter.first;
+    weight = iter.second;
+    if (gee[flip_pos] == gee[rel_vol])
       delta = delta + weight;
     else {
       delta = delta - weight;
@@ -125,7 +125,7 @@ Gene Gene::local_opt(Graph gh) {
   //int delta_sum = 0;
   int size = gene.size();
   vector<bool> filped_vector = gene;
-  
+  auto rel_edges = gh.get_rel_edges();
   for (int i = 1; i <= size; i ++) {
     rperm.push_back(i);
   }
@@ -150,7 +150,7 @@ Gene Gene::local_opt(Graph gh) {
       // delta = fliped - soln_value;
 
       // cout << "hi3" << endl;
-      delta = get_delta(gh, gene, j);
+      delta = get_delta(rel_edges, gene, j);
       // iter ++;
       // cout << "hi4" << endl;
       if (delta > 0) {

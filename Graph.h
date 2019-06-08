@@ -9,7 +9,7 @@ private:
   int vtx_num;
   int edge_num;
   vector<pair<pair<int, int>, int>> edges; // ((v1, v2), weight)
-  vector<vector<pair<pair<int, int>, int>>> rel_edges;
+  vector<vector<pair<int, int>>> rel_edges;
 
 public:
   Graph();
@@ -17,5 +17,5 @@ public:
   int get_vtx_num();
   int get_edge_num();
   vector<pair<pair<int, int>, int>> get_edges();
-  vector<vector<pair<pair<int, int>, int>>> get_rel_edges();
+  vector<vector<pair<int, int>>> get_rel_edges();
 };
