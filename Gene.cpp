@@ -102,12 +102,16 @@ int Gene::get_delta(Graph gh, vector<bool> gee, int pos) {
   //cout << "rel_edge_size: " << pos_rel_edges.size() << endl;
 
   int delta = 0;
-
+  pair<int, int> edge;
+  int weight;
+  
   for (auto iter: pos_rel_edges) {
-    if (gee[iter.first.first] == gee[iter.first.second])
-      delta = delta + iter.second;
+    edge = iter.first;
+     weight = iter.second;
+    if (gee[edge.first] == gee[edge.second])
+      delta = delta + weight;
     else {
-      delta = delta - iter.second;
+      delta = delta - weight;
     }
   }
   return delta;  
