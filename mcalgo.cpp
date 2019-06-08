@@ -11,7 +11,7 @@ using namespace std;
 
 #define INITIAL 1000
 #define ITERTIME 170000
-#define CHILDNUM 200
+#define CHILDNUM 10
 
 int main(int argc, char *argv[]) {
   //clock_t start_time = clock();
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 
   gh = Graph(vtxnum, edgenum, we);
   gas = Gasolver(gh, INITIAL);
-  vector<Gene> gas_vector = gas.get_gene_vector();
+  // vector<Gene> gas_vector = gas.get_gene_vector();
   //cout << "Graph length: " << gh.get_edges().size() << endl;
   //cout << "GAS: " << gas.get_gas_size() << endl;
   //for (int j = 0; j < gas.get_gas_size(); j ++) {
@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 1" << endl;
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
+    // cout << "HIIIIII " << endl;
     if (iteration % 10 == 0) {
      	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
     // 	// for (auto iter: gas.get_gene_vector()) {

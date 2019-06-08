@@ -1,7 +1,6 @@
 #include "Gasolver.h"
 
 #define EVOL_PRESSURE 0.7
-#define CHILDNUM 200
 
 Gasolver::Gasolver(Graph gh, int sz) {
     Gene gene;
@@ -84,7 +83,7 @@ int Gasolver::get_gas_size() {
 }
 
 int Gasolver::selection() {
-    srand(static_cast<unsigned int>(clock()));
+    // srand(static_cast<unsigned int>(clock()));
     int selector = rand()%size;
     return selector;
 }
@@ -135,26 +134,32 @@ Gene Gasolver::gas_roulette_merge() {
 }
 
 void gene_random_merge(Gene &gene1, Gene &gene2, vector<bool> &child) {
-    int size = child.size();
+    srand(static_cast<unsigned int>(clock()));
     vector<bool> g1 = gene1.get_gene();
     vector<bool> g2 = gene2.get_gene();
+    int size = g1.size();
 
-    cout << "SIZE : " << size << endl;
-    srand(static_cast<unsigned int>(clock()));
+    // cout << "SIZE : " << size << endl;
+    // cout << "value: " << gene1.get_soln_value() << endl;
+    // assert (g1.size() == g2.size());
+    // cout << "before child : "<< child.size() << endl;
     for (int i = 0; i < size; i ++){
-        bool p = rand() % 2;
-        cout << "P0 : " << p << endl;
-        if (p) {
-            child.push_back(g1[i]);
-        } else {
+        int p = rand() % 2;
+        //cout << "P0 : " << p << endl;
+        if (p == 1) {
+            child[i] = g1[i];
+        } else if (p == 0) {
             assert(p == false);
-            child.push_back(g2[i]);
+            child[i] = g2[i];
         }
     }
+    // cout << "HERE!!!!!!! : "<< child.size() << endl;
 }
 
 int tournament(int g1, int g2) {
+    srand(static_cast<unsigned int>(clock()));
     double r = ((double) rand() / (RAND_MAX));
+    // cout << "r : " << r << endl;
     if (EVOL_PRESSURE > r) {
         return max(g1, g2);
     } else {
@@ -196,22 +201,36 @@ Gasolver Gasolver::generation(int child) {
     vector<bool> children[child];
     vector<Gene> children_gene;
     for (int i = 0; i < child; i ++) {
+      srand(static_cast<unsigned int>(clock()));
         int sel1 = selection();
         int sel2 = selection();
         int sel3 = selection();
         int sel4 = selection();
+	// cout << "sel: " << sel1 << ", " << sel2 << ", " << sel3 << ", " << sel4 << endl;
+	// assert (sel1 != sel2);
+
         int winner1 = tournament(sel1, sel2);
         int winner2 = tournament(sel3, sel4);
+	// cout << "win: " << winner1 << ", " << winner2 << endl;
         children[i] = vector<bool>(gene_vector[sel1].get_gene().size());
+	// cout << "G1: " << gene_vector[winner1].get_gene().size() << ", " << gene_vector[winner2].get_gene().size() << endl;
+	// cout << "G2: " << gene_vector[winner1].get_soln_value() << ", " << gene_vector[winner2].get_soln_value() << endl;
+	// cout << "MCUT: " << get_maxcut() << endl;
         gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
-        Gene new_gene = Gene(own_graph, children[i]);
-        new_gene = new_gene.mutate(own_graph).local_opt(own_graph);
+	// cout << "merge fin" << endl;
+
+	Gene new_gene = Gene(own_graph, children[i]);
+	new_gene = new_gene.mutate(own_graph).local_opt(own_graph);
         children_gene.push_back(new_gene);
+
+	// cout << "3" << endl;
     }
-    
+    // cout << "4" << endl;
+
     for (int i = 0; i < child; i ++) {
         gene_vector[i] = children_gene[i];
     }
+    
     /*for (int j = 0; j < child; j ++) {
       gene_vector[j] = gas_merge().mutate(own_graph);
       // if (j ==0) {

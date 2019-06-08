@@ -15,8 +15,8 @@ Graph::Graph(int vn, int en, vector<pair<pair<int, int>, int>> we) {
     // cout << from << endl;
     // assert (to >= 0);
     // assert (from >= 0);
-    rel_edges[to].push_back(iter);
-    rel_edges[from].push_back(iter);
+    rel_edges[to].push_back(make_pair(make_pair(to, from), iter.second));
+    rel_edges[from].push_back(make_pair(make_pair(to, from), iter.second));
   }
   // cout << "hi" << endl;
 

@@ -65,13 +65,17 @@ Gene Gene::mutate(Graph gh) {
     int sz = gene.size();
     int delta = 0;
 
+    // cout << "mut start : " << sz * MUTATE  << endl;
+
     for (int i =0; i < sz*MUTATE; i++) {
       int ith = rand()%sz;
-      delta = get_delta(gh, gene, sz - ith);    
-      gene[sz - ith - 1] = !gene[sz - ith - 1];
-      soln_value = soln_value + delta;
-      delta = 0;
+      // delta = get_delta(gh, gene, ith+1);
+      gene[ith] = !gene[ith];
+      // soln_value = soln_value + delta;
+      // delta = 0;
     }
+    soln_value = calc_soln_value_new(gh, gene);
+    // cout << "mut6" << endl;
     //int mutation_size = sz * MUTATE;
     //for (int i = 0; i < mutation_size; i++) {
     //    ith = rand()%(gene.size());
@@ -93,14 +97,14 @@ vector<bool> Gene::get_gene() {
 
 int Gene::get_delta(Graph gh, vector<bool> gee, int pos) {
   auto rel_edges = gh.get_rel_edges();
-  // cout << "hi size : " << rel_edges.size() << endl;
   auto pos_rel_edges = rel_edges[pos - 1];
-  // cout << "hi pos : " << pos << endl;
+
+  //cout << "rel_edge_size: " << pos_rel_edges.size() << endl;
 
   int delta = 0;
 
   for (auto iter: pos_rel_edges) {
-    if (gee[iter.first.first-1] == gee[iter.first.second-1])
+    if (gee[iter.first.first] == gee[iter.first.second])
       delta = delta + iter.second;
     else {
       delta = delta - iter.second;
@@ -126,9 +130,12 @@ Gene Gene::local_opt(Graph gh) {
   // cout << "aaaaaaaaa: " << aaaa << endl;
   // cout << "soln : " << soln_value << endl;
   // exit(0);
-  
+  // cout << "rperm size : " << rperm.size() << endl;
   // int i = 0;
   // cout << "hi 2" << endl;
+
+  // int iter = 0;
+  // int iter2 = 0;
   while (imp) {
     imp = false;
     for (auto j: rperm) {
@@ -140,6 +147,7 @@ Gene Gene::local_opt(Graph gh) {
 
       // cout << "hi3" << endl;
       delta = get_delta(gh, gene, j);
+      // iter ++;
       // cout << "hi4" << endl;
       if (delta > 0) {
 	// cout << endl;
@@ -160,6 +168,7 @@ Gene Gene::local_opt(Graph gh) {
 	imp = true;
       }
     }
+    // iter2 ++;
     // int c_soln_value = calc_soln_value_new(gh, gene);
     // cout << "c value: " << c_soln_value << endl;
     // cout << "soln val 2: " << soln_value << endl;
@@ -177,6 +186,8 @@ Gene Gene::local_opt(Graph gh) {
   // assert (bbbb>=aaaa);
   // cout << "hi end" << endl;
   //  int after_val = calc_soln_value_new(gh, gene);
+  // cout << "local opt per local search : " << iter2 << endl;
+  // cout << "delta per local : " << iter << endl;
   return *this;
 }
 
