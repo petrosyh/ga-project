@@ -11,7 +11,7 @@ using namespace std;
 
 #define INITIAL 1000
 #define ITERTIME 170000
-#define CHILDNUM 15
+#define CHILDNUM 200
 
 int main(int argc, char *argv[]) {
   //clock_t start_time = clock();
@@ -66,13 +66,13 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 1" << endl;
     gas = gas.generation(CHILDNUM);
     //cout << "Hi 2" << endl;
-    // if (iteration % 10 == 0) {
-    // 	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
+    if (iteration % 10 == 0) {
+     	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
     // 	// for (auto iter: gas.get_gene_vector()) {
     // 	//   cout << iter.get_soln_value() << " ";
     // 	// }
     // 	// cout << endl;    
-    // }
+    }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);

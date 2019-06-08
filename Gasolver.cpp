@@ -1,5 +1,7 @@
 #include "Gasolver.h"
 
+#define EVOL_PRESSURE 0.7
+#define CHILDNUM 200
 
 Gasolver::Gasolver(Graph gh, int sz) {
     Gene gene;
@@ -81,10 +83,10 @@ int Gasolver::get_gas_size() {
     return size;
 }
 
-pair<Gene, int> Gasolver::selection() {
+int Gasolver::selection() {
     srand(static_cast<unsigned int>(clock()));
     int selector = rand()%size;
-    return make_pair(gene_vector[selector], selector);
+    return selector;
 }
 
 //assume values are sorted.
@@ -131,62 +133,38 @@ Gene Gasolver::gas_roulette_merge() {
 
     return ret;
 }
-Gene Gasolver::gas_merge() {
-    pair<Gene, int> sel1 = selection();
-    pair<Gene, int> sel2 = selection();
-    pair<Gene, int> sel3 = selection();
-    pair<Gene, int> sel4 = selection();
-    
-    Gene g1 = sel1.first;
-    Gene g2 = sel2.first;
-    Gene g3 = sel3.first;
-    Gene g4 = sel4.first;
 
-    int winner1, winner2, looser1, looser2;
+void gene_random_merge(Gene &gene1, Gene &gene2, vector<bool> &child) {
+    int size = child.size();
+    vector<bool> g1 = gene1.get_gene();
+    vector<bool> g2 = gene2.get_gene();
 
-    int gene_size = g1.get_gene().size();
-    vector<bool> new_gene1;
-    Gene ret;
-
-    if (g1.get_soln_value() > g2.get_soln_value()) {
-        looser1 = sel2.second;
-        winner1 = sel1.second;
-    } else if (g1.get_soln_value() < g2.get_soln_value()) {
-        looser1 = sel1.second;
-        winner1 = sel2.second;
-    } else {
-        looser1 = sel1.second;
-        winner1 = sel2.second;
-    }
-
-    if (g3.get_soln_value() > g4.get_soln_value()) {
-        looser2 = sel4.second;
-        winner2 = sel3.second;
-    } else if (g3.get_soln_value() < g4.get_soln_value()) {
-        looser2 = sel3.second;
-        winner2 = sel4.second;
-    } else {
-        looser2 = sel3.second;
-        winner2 = sel4.second;
-    }
-
-    for (int i = 0; i < gene_size; i++) {
-        if (i % 2 == 0) {
-            new_gene1.push_back(gene_vector[winner1].get_gene()[i]);
+    cout << "SIZE : " << size << endl;
+    srand(static_cast<unsigned int>(clock()));
+    for (int i = 0; i < size; i ++){
+        bool p = rand() % 2;
+        cout << "P0 : " << p << endl;
+        if (p) {
+            child.push_back(g1[i]);
         } else {
-            new_gene1.push_back(gene_vector[winner2].get_gene()[i]);
+            assert(p == false);
+            child.push_back(g2[i]);
         }
     }
-    ret = Gene(own_graph, new_gene1);
-    
-    gene_vector[looser1] = ret;
-    gene_vector[looser2] = ret;
-    //for (auto i : new_gene) {
-    //    cout << i;
-    //}
-    //cout << endl;
+}
 
-    return ret;
+int tournament(int g1, int g2) {
+    double r = ((double) rand() / (RAND_MAX));
+    if (EVOL_PRESSURE > r) {
+        return max(g1, g2);
+    } else {
+        return min(g1, g2);
+    }
+}
+
+Gene Gasolver::gas_merge() {
+    
+    return Gene();
 }
 
 int calc_aux(Graph gh, vector<bool> new_gene) {
@@ -214,7 +192,27 @@ Gasolver Gasolver::generation(int child) {
     // cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
     // cout << "before mut calc: " << calc_aux(own_graph, gene_vector[0].get_gene()) << endl;
     sort(gene_vector.begin(), gene_vector.end());
-    for (int j = 0; j < child; j ++) {
+
+    vector<bool> children[child];
+    vector<Gene> children_gene;
+    for (int i = 0; i < child; i ++) {
+        int sel1 = selection();
+        int sel2 = selection();
+        int sel3 = selection();
+        int sel4 = selection();
+        int winner1 = tournament(sel1, sel2);
+        int winner2 = tournament(sel3, sel4);
+        children[i] = vector<bool>(gene_vector[sel1].get_gene().size());
+        gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
+        Gene new_gene = Gene(own_graph, children[i]);
+        new_gene = new_gene.mutate(own_graph).local_opt(own_graph);
+        children_gene.push_back(new_gene);
+    }
+    
+    for (int i = 0; i < child; i ++) {
+        gene_vector[i] = children_gene[i];
+    }
+    /*for (int j = 0; j < child; j ++) {
       gene_vector[j] = gas_merge().mutate(own_graph);
       // if (j ==0) {
       // 	cout << "before mut soln: " << gene_vector[0].get_soln_value() << endl;
@@ -229,7 +227,7 @@ Gasolver Gasolver::generation(int child) {
     }
     gene_vector[0] = gene_vector[0].local_opt(own_graph);
     //cout << "here2" << endl;
-    
+    */
     
     
     return *this;
