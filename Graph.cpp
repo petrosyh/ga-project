@@ -27,18 +27,18 @@ Graph::Graph () {
   edge_num = 24000;
 }
 
-int Graph::get_vtx_num () {
+int Graph::get_vtx_num () const {
   return vtx_num;
 }
 
-int Graph::get_edge_num () {
+int Graph::get_edge_num () const {
   return edge_num;
 }
 
-vector<pair<pair<int, int>, int>> Graph::get_edges () {
+vector<pair<pair<int, int>, int>> Graph::get_edges () const {
   return edges;
 }
 
-vector<vector<pair<int, int>>> Graph::get_rel_edges() {
+vector<vector<pair<int, int>>> Graph::get_rel_edges() const {
   return rel_edges;
 }

@@ -14,8 +14,8 @@ private:
 public:
   Graph();
   Graph(int vtx_nam, int edge_num, vector<pair<pair<int, int>, int>> edges);
-  int get_vtx_num();
-  int get_edge_num();
-  vector<pair<pair<int, int>, int>> get_edges();
-  vector<vector<pair<int, int>>> get_rel_edges();
+  int get_vtx_num() const;
+  int get_edge_num() const;
+  vector<pair<pair<int, int>, int>> get_edges() const;
+  vector<vector<pair<int, int>>> get_rel_edges() const;
 };

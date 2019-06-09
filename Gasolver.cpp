@@ -3,7 +3,7 @@
 #define EVOL_PRESSURE 0.7
 #define ROULETTE_K 4
 
-Gasolver::Gasolver(Graph gh, int sz) {
+Gasolver::Gasolver(const Graph* gh, int sz) {
     Gene gene;
     own_graph = gh;
     size = sz;
@@ -182,11 +182,11 @@ Gene Gasolver::gas_merge() {
     return Gene();
 }
 
-int calc_aux(Graph gh, vector<bool> new_gene) {
+int calc_aux(const Graph* gh, vector<bool> new_gene) {
     int val = 0;
     int fst_vtx = 0;
     int snd_vtx = 0;
-    vector<pair<pair<int, int>, int>> edges = gh.get_edges();
+    vector<pair<pair<int, int>, int>> edges = gh->get_edges();
     for (auto iter: edges) {
         fst_vtx = iter.first.first;
         snd_vtx = iter.first.second;
@@ -241,9 +241,9 @@ Gasolver Gasolver::generation(int child) {
     // cout << "merge fin" << endl;
 
     Gene new_gene = Gene(own_graph, children[i]);
-    new_gene = new_gene.mutate(own_graph);
+    new_gene = new_gene.mutate();
     if (i % 20 == 0) {
-      new_gene = new_gene.local_opt(own_graph);
+      new_gene = new_gene.local_opt();
     }
     children_gene.push_back(new_gene);
 

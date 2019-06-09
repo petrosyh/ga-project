@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
   }
   iter_time = (500 * vtxnum / 3000) * 1000; /* msec */
   gh = Graph(vtxnum, edgenum, we);
-  gas = Gasolver(gh, INITIAL);
+  gas = Gasolver(&gh, INITIAL);
   // vector<Gene> gas_vector = gas.get_gene_vector();
   //cout << "Graph length: " << gh.get_edges().size() << endl;
   //cout << "GAS: " << gas.get_gas_size() << endl;

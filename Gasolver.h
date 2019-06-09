@@ -12,11 +12,11 @@ using namespace std;
 class Gasolver {
 private:
     vector<Gene> gene_vector;
-    Graph own_graph;
+    const Graph *own_graph;
     int size;
 
 public:
-    Gasolver(Graph gh, int sz);
+    Gasolver(const Graph* gh, int sz);
     Gasolver();
     vector<Gene> get_gene_vector();
     Gene gas_merge();

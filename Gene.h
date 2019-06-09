@@ -9,20 +9,20 @@ using namespace std;
 
 class Gene {
 private:
-    Graph *own_gh;
+    const Graph *own_gh;
     vector<bool> gene;
     int soln_value;
 
 public:
     Gene();
-    Gene(Graph gh);
-    Gene(Graph gh, vector<bool> new_gene);
-    int calc_soln_value(Graph gh);
-    int calc_soln_value_new(Graph gh, vector<bool> new_gene);
+    Gene(const Graph* gh);
+    Gene(const Graph* gh, vector<bool> new_gene);
+    int calc_soln_value(const Graph* gh);
+    int calc_soln_value_new(const Graph* gh, vector<bool> new_gene);
     int get_soln_value() const;
     vector<bool> get_gene();
-    Gene mutate(Graph gh);
-    Gene local_opt(Graph gh);
-    int get_delta(vector<vector<pair<int, int>>> rel_edges, vector<bool> gee, int pos);
+    Gene mutate();
+    Gene local_opt();
+    int get_delta(vector<bool> gee, int pos);
 };
 bool operator<(const Gene &s1, const Gene &s2);
