@@ -74,20 +74,20 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 2" << endl;
     // cout << "HIIIIII " << endl;
     
-    if (iteration % 10 == 0) {
-     	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
-	// for (auto iter: gas.get_gene_vector()) {
-	//   cout << iter.get_soln_value() << " ";
-	// }
-	// cout << endl;    
+    // if (iteration % 10 == 0) {
+    //  	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
+    // 	// for (auto iter: gas.get_gene_vector()) {
+    // 	//   cout << iter.get_soln_value() << " ";
+    // 	// }
+    // 	// cout << endl;    
     
-    }
+    // }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= (iter_time - 5000));
 
-  //gas.print_opt_set();
-  cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << ", " << gas.StandardDeviation() << endl;
+  gas.print_opt_set();
+  // cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << ", " << gas.StandardDeviation() << endl;
   return 0;
 }
 
