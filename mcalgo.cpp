@@ -25,7 +25,8 @@ int main(int argc, char *argv[]) {
   Graph gh;
   Gasolver gas;
   ifstream openFile(filePath.data());
-
+  double iter_time = 0;
+  
   if (openFile.is_open()) {
     string line;
     int num;
@@ -50,7 +51,7 @@ int main(int argc, char *argv[]) {
     }
     openFile.close();
   }
-
+  iter_time = (500 * vtxnum / 3000) * 1000; /* msec */
   gh = Graph(vtxnum, edgenum, we);
   gas = Gasolver(gh, INITIAL);
   // vector<Gene> gas_vector = gas.get_gene_vector();
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]) {
     }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     
-  } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= ITERTIME);
+  } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= iter_time);
 
   //gas.print_opt_set();
   cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << ", " << gas.StandardDeviation() << endl;

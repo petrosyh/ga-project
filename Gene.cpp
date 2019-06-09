@@ -8,8 +8,8 @@ double doubleRand() {
   return double(rand()) / (double(RAND_MAX) + 1.0);
 }
 
-Gene::Gene(Graph gh) {
-    int vnum = gh.get_vtx_num();
+Gene::Gene(const Graph* gh) {
+    int vnum = gh->get_vtx_num();
     srand(static_cast<unsigned int>(clock()));
     for (int i = 0; i < vnum; i ++) {
         double k = doubleRand();
@@ -24,7 +24,7 @@ Gene::Gene(Graph gh) {
 // int edge_num;
 //  vector<pair<pair<int, int>, int>> edges; // ((v1, v2), weight)
 
-Gene::Gene(Graph gh, vector<bool> new_gene) {
+Gene::Gene(const Graph* gh, vector<bool> new_gene) {
     gene = new_gene;
     soln_value = calc_soln_value_new(gh, new_gene);
 }

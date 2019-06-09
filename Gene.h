@@ -9,6 +9,7 @@ using namespace std;
 
 class Gene {
 private:
+    Graph *own_gh;
     vector<bool> gene;
     int soln_value;
 

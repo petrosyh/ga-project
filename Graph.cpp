@@ -5,7 +5,7 @@ Graph::Graph(int vn, int en, vector<pair<pair<int, int>, int>> we) {
   vtx_num = vn;
   edge_num = en;
   edges = we; // ((v1, v2), weight)
-  rel_edges.resize(1000);
+  rel_edges.resize(vn);
   // cout << "Size : " << rel_edges.size() << endl;
   int to, from;
   for (auto iter:we) {
@@ -23,8 +23,8 @@ Graph::Graph(int vn, int en, vector<pair<pair<int, int>, int>> we) {
 }
 
 Graph::Graph () {
-  vtx_num = 1000;
-  edge_num = 10000;
+  vtx_num = 3000;
+  edge_num = 24000;
 }
 
 int Graph::get_vtx_num () {
