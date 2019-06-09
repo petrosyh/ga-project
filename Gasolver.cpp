@@ -1,7 +1,12 @@
 #include "Gasolver.h"
 
-#define EVOL_PRESSURE 0.7
+#define EVOL_PRESSURE 0.65
 #define ROULETTE_K 4
+
+#define LOC0 30
+#define LOC1 75
+#define FM0 5
+#define FM1 75
 
 Gasolver::Gasolver(Graph gh, int sz) {
     Gene gene;
@@ -198,7 +203,7 @@ int calc_aux(Graph gh, vector<bool> new_gene) {
 }
 
 
-Gasolver Gasolver::generation(int child) {
+void Gasolver::generation(int child, int flag) {
   vector<int> values;
   // vector<Gene> new_children;
   // int minstate;
@@ -240,10 +245,26 @@ Gasolver Gasolver::generation(int child) {
     gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
     // cout << "merge fin" << endl;
 
+    
     Gene new_gene = Gene(own_graph, children[i]);
-    new_gene = new_gene.mutate(own_graph);
-    if (i % 20 == 0) {
-      new_gene = new_gene.local_opt(own_graph);
+    new_gene = new_gene.mutate(&own_graph, flag);
+
+    int loc_rate;
+    int fm_rate;
+    if (flag == 0) {
+      loc_rate = LOC0;
+      fm_rate = FM0;
+    } else if (flag == 1) {
+      loc_rate = LOC1;
+      fm_rate = FM1;
+    }
+      
+    
+    if (i % loc_rate == 0) {
+      new_gene = new_gene.local_opt(&own_graph);
+    }
+    if (i % fm_rate == 0) {
+      new_gene = new_gene.variation_of_fm(&own_graph);
     }
     children_gene.push_back(new_gene);
 
@@ -273,7 +294,7 @@ Gasolver Gasolver::generation(int child) {
     */
     
     
-  return *this;
+  // return *this;
 }
 
 vector<int> Gasolver::get_all_value() {

@@ -20,8 +20,10 @@ public:
     int calc_soln_value_new(Graph gh, vector<bool> new_gene);
     int get_soln_value() const;
     vector<bool> get_gene();
-    Gene mutate(Graph gh);
-    Gene local_opt(Graph gh);
-    int get_delta(vector<vector<pair<int, int>>> *rel_edges, vector<bool> gee, int pos);
+    Gene mutate(Graph* gh, int flag);
+    Gene local_opt(Graph* gh);
+    void get_gains(vector<vector<pair<int, int>>> *rel_edges, vector<int> *gains);
+    Gene variation_of_fm(Graph* gh);
+    int get_delta(vector<vector<pair<int, int>>> *rel_edges, vector<bool> gee, int pos1);
 };
 bool operator<(const Gene &s1, const Gene &s2);

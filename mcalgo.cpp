@@ -11,7 +11,7 @@ using namespace std;
 
 #define INITIAL 1000
 #define ITERTIME 170000
-#define CHILDNUM 200
+#define CHILDNUM 300
 
 int main(int argc, char *argv[]) {
   //clock_t start_time = clock();
@@ -65,7 +65,12 @@ int main(int argc, char *argv[]) {
     //cout << "Hi " << endl;
     iteration ++;
     //cout << "Hi 1" << endl;
-    gas = gas.generation(CHILDNUM);
+    auto now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count();
+    double six = now/iter_time;
+    if (six < 0.2)
+      gas.generation(CHILDNUM, 0);
+    else
+      gas.generation(CHILDNUM, 1);
     //cout << "Hi 2" << endl;
     // cout << "HIIIIII " << endl;
     
@@ -79,7 +84,7 @@ int main(int argc, char *argv[]) {
     }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
     
-  } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= iter_time);
+  } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= (iter_time - 5000));
 
   //gas.print_opt_set();
   cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << ", " << gas.StandardDeviation() << endl;
