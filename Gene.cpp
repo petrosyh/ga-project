@@ -8,8 +8,8 @@ double doubleRand() {
   return double(rand()) / (double(RAND_MAX) + 1.0);
 }
 
-Gene::Gene(const Graph* gh) {
-    int vnum = gh->get_vtx_num();
+Gene::Gene(Graph gh) {
+    int vnum = gh.get_vtx_num();
     srand(static_cast<unsigned int>(clock()));
     for (int i = 0; i < vnum; i ++) {
         double k = doubleRand();
@@ -24,7 +24,7 @@ Gene::Gene(const Graph* gh) {
 // int edge_num;
 //  vector<pair<pair<int, int>, int>> edges; // ((v1, v2), weight)
 
-Gene::Gene(const Graph* gh, vector<bool> new_gene) {
+Gene::Gene(Graph gh, vector<bool> new_gene) {
     gene = new_gene;
     soln_value = calc_soln_value_new(gh, new_gene);
 }
@@ -95,9 +95,10 @@ vector<bool> Gene::get_gene() {
     return gene;
 }
 
-int Gene::get_delta(vector<vector<pair<int, int>>> rel_edges, vector<bool> gee, int pos) {
+int Gene::get_delta(vector<vector<pair<int, int>>> *rel_edges, 
+		    vector<bool> gee, int pos) {
   int flip_pos = pos - 1;
-  auto pos_rel_edges = rel_edges[flip_pos];
+  auto pos_rel_edges = (*rel_edges)[flip_pos];
 
   //cout << "rel_edge_size: " << pos_rel_edges.size() << endl;
 
@@ -150,7 +151,7 @@ Gene Gene::local_opt(Graph gh) {
       // delta = fliped - soln_value;
 
       // cout << "hi3" << endl;
-      delta = get_delta(rel_edges, gene, j);
+      delta = get_delta(&rel_edges, gene, j);
       // iter ++;
       // cout << "hi4" << endl;
       if (delta > 0) {

@@ -9,7 +9,6 @@ using namespace std;
 
 class Gene {
 private:
-    Graph *own_gh;
     vector<bool> gene;
     int soln_value;
 
@@ -23,6 +22,6 @@ public:
     vector<bool> get_gene();
     Gene mutate(Graph gh);
     Gene local_opt(Graph gh);
-    int get_delta(vector<vector<pair<int, int>>> rel_edges, vector<bool> gee, int pos);
+    int get_delta(vector<vector<pair<int, int>>> *rel_edges, vector<bool> gee, int pos);
 };
 bool operator<(const Gene &s1, const Gene &s2);
