@@ -11,7 +11,7 @@ using namespace std;
 
 #define INITIAL 1000
 #define ITERTIME 170000
-#define CHILDNUM 300
+#define CHILDNUM 200
 
 int main(int argc, char *argv[]) {
   //clock_t start_time = clock();
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
   Gasolver gas;
   ifstream openFile(filePath.data());
   double iter_time = 0;
-  
+
   if (openFile.is_open()) {
     string line;
     int num;
@@ -67,23 +67,23 @@ int main(int argc, char *argv[]) {
     //cout << "Hi 1" << endl;
     auto now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count();
     double six = now/iter_time;
-    if (six < 0.2)
+    if (six < 0.4)
       gas.generation(CHILDNUM, 0);
     else
       gas.generation(CHILDNUM, 1);
     //cout << "Hi 2" << endl;
     // cout << "HIIIIII " << endl;
-    
+
     // if (iteration % 10 == 0) {
     //  	cout << iteration << ", " << gas.get_maxcut() << ", " << gas.get_maxcut_avg() << endl;
     // 	// for (auto iter: gas.get_gene_vector()) {
     // 	//   cout << iter.get_soln_value() << " ";
     // 	// }
-    // 	// cout << endl;    
-    
+    // 	// cout << endl;
+
     // }
     //diff_time = (float) (clock() - start_time) / CLOCKS_PER_SEC;
-    
+
   } while(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start).count() <= (iter_time - 5000));
 
   gas.print_opt_set();
@@ -92,5 +92,5 @@ int main(int argc, char *argv[]) {
 }
 
 //Graph string_parser(string fpath) {
-//  
+//
 //}

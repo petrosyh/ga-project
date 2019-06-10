@@ -5,8 +5,8 @@
 
 #define LOC0 30
 #define LOC1 75
-#define FM0 5
-#define FM1 75
+#define FM0 2
+#define FM1 10
 
 Gasolver::Gasolver(Graph gh, int sz) {
     Gene gene;
@@ -28,7 +28,7 @@ int minval(vector<int> values) {
     for (auto iter : values) {
         if (ret > iter) {
             ret = iter;
-        }   
+        }
     }
     return ret;
 }
@@ -121,7 +121,7 @@ Gene Gasolver::gas_roulette_merge() {
   // double sum_of_fitnesses = 0;
   // for (auto& n : fitness_vec)
   //   sum_of_fitnesses += n;
-  
+
   //   pair<Gene, int> sel1 = roulette_selection();
   //   pair<Gene, int> sel2 = roulette_selection();
 
@@ -132,7 +132,7 @@ Gene Gasolver::gas_roulette_merge() {
   //   int ith_2 = sel2.second;
 
   //   int gene_size = g1.get_gene().size();
-    
+
   //   vector<bool> new_gene1;
   //   Gene ret;
 
@@ -183,7 +183,7 @@ int tournament(int g1, int g2) {
 }
 
 Gene Gasolver::gas_merge() {
-    
+
     return Gene();
 }
 
@@ -216,7 +216,7 @@ void Gasolver::generation(int child, int flag) {
   vector<bool> children[child];
   vector<Gene> children_gene;
   for (int i = 0; i < child; i ++) {
-    srand(static_cast<unsigned int>(clock()));
+    // srand(static_cast<unsigned int>(clock()));
     // vector<double> fitness_vec = fitnesses();
     // double sum_of_fitnesses = 0;
     // for (auto& n : fitness_vec) {
@@ -245,7 +245,7 @@ void Gasolver::generation(int child, int flag) {
     gene_random_merge(gene_vector[winner1], gene_vector[winner2], children[i]);
     // cout << "merge fin" << endl;
 
-    
+
     Gene new_gene = Gene(own_graph, children[i]);
     new_gene = new_gene.mutate(&own_graph, flag);
 
@@ -258,11 +258,11 @@ void Gasolver::generation(int child, int flag) {
       loc_rate = LOC1;
       fm_rate = FM1;
     }
-      
-    
-    if (i % loc_rate == 0) {
-      new_gene = new_gene.local_opt(&own_graph);
-    }
+
+
+    // if (i % loc_rate == 0) {
+    //   // new_gene = new_gene.local_opt(&own_graph);
+    // }
     if (i % fm_rate == 0) {
       new_gene = new_gene.variation_of_fm(&own_graph);
     }
@@ -275,7 +275,7 @@ void Gasolver::generation(int child, int flag) {
   for (int i = 0; i < child; i ++) {
     gene_vector[i] = children_gene[i];
   }
-    
+
   /*for (int j = 0; j < child; j ++) {
     gene_vector[j] = gas_merge().mutate(own_graph);
     // if (j ==0) {
@@ -292,8 +292,8 @@ void Gasolver::generation(int child, int flag) {
     gene_vector[0] = gene_vector[0].local_opt(own_graph);
     //cout << "here2" << endl;
     */
-    
-    
+
+
   // return *this;
 }
 

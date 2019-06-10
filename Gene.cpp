@@ -19,7 +19,7 @@ Gene::Gene(Graph gh) {
         gene.push_back(k >= 0.5);
     }
 
-    soln_value = calc_soln_value(gh);    
+    soln_value = calc_soln_value(gh);
 }
 
 // int vtx_num;
@@ -117,7 +117,7 @@ vector<bool> Gene::get_gene() {
     return gene;
 }
 
-int Gene::get_delta(vector<vector<pair<int, int>>> *rel_edges, 
+int Gene::get_delta(vector<vector<pair<int, int>>> *rel_edges,
 		    vector<bool> gee, int pos) {
   int flip_pos = pos - 1;
   auto pos_rel_edges = (*rel_edges)[flip_pos];
@@ -127,7 +127,7 @@ int Gene::get_delta(vector<vector<pair<int, int>>> *rel_edges,
   int delta = 0;
   int rel_vol;
   int weight;
-  
+
   for (auto iter: pos_rel_edges) {
     rel_vol = iter.first;
     weight = iter.second;
@@ -137,12 +137,12 @@ int Gene::get_delta(vector<vector<pair<int, int>>> *rel_edges,
       delta = delta - weight;
     }
   }
-  return delta;  
+  return delta;
 }
 
 void Gene::get_gains(vector<vector<pair<int, int>>> *rel_edges, vector<int> *gains) {
   // auto pos_rel_edges = (*rel_edges)[flip_pos];
-  
+
   for (int i = 0; i < gene.size(); i ++) {
     int gain = 0;
     for (auto iter: ((*rel_edges)[i])) {
@@ -213,6 +213,8 @@ Gene Gene::variation_of_fm(Graph* gh) {
 
     // empty set Q
     vector<int> Q;
+    vector<int> Q_aux;
+    Q_aux.clear();
     Q.resize(gh->get_vtx_num());
     for (int j = 0; j < gh->get_vtx_num(); j++) {
       Q[j] = 0;
@@ -222,8 +224,10 @@ Gene Gene::variation_of_fm(Graph* gh) {
       pair<int, int> max_gain = find_max_gain(&Q, &gains);
       int max_vtx = max_gain.second;
       // cout << max_vtx << " " <<  max_gain.first << endl;
-      if (max_vtx != INT_MIN)
+      if (max_vtx != INT_MIN) {
 	Q[max_vtx] = 1;
+	Q_aux.push_back(max_vtx);
+      }
 
       for (auto iter: (rel_edges[max_vtx])) {
 	int vtx = iter.first;
@@ -237,9 +241,9 @@ Gene Gene::variation_of_fm(Graph* gh) {
       // int aux2 = 0;
       // for (int k = 0; k < Q.size(); k++)
       // 	aux2 = aux2 + Q[k];
-      
+
       // cout << "Q size : " << aux2 << endl;
-      
+
       // if (gene[max_vtx] == true) {
       // 	for (auto iter: (rel_edges[max_vtx])) {
       // 	  int vtx = iter.first;
@@ -265,15 +269,15 @@ Gene Gene::variation_of_fm(Graph* gh) {
 
     vector<long> acc_gains;
     long aux = 0;
-    for (int k = 0; k < gains.size(); k++) {
-      aux = aux + gains[k];
+    for (int k = 0; k < Q_aux.size(); k++) {
+      aux = aux + gains[Q_aux[k]];
       acc_gains.push_back(aux);
     }
     int max_where = maxwhere_long(acc_gains);
     // cout << "max : " << max_where << endl;
 
     for (int t = 0; t < max_where; t++) {
-      new_gene[t] = !new_gene[t];
+      new_gene[Q_aux[t]] = !new_gene[Q_aux[t]];
     }
     int new_soln_val = calc_soln_value_new_aux(gh, new_gene);
     if (new_soln_val > soln_value) {
@@ -282,7 +286,7 @@ Gene Gene::variation_of_fm(Graph* gh) {
       soln_value = new_soln_val;
     }
   }
-  
+
   return *this;
 }
 
@@ -312,7 +316,7 @@ Gene Gene::local_opt(Graph* gh) {
   while (imp) {
     imp = false;
     for (auto j: rperm) {
-      
+
       // filped_vector = gene;
       // filped_vector[j] = !filped_vector[j];
       // int fliped = calc_soln_value_new(gh, filped_vector);
