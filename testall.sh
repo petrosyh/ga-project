@@ -12,7 +12,7 @@ for name in $(ls $INPUT_DIR)
 do
   echo "Running for input $name..."
   touch $RESULT_DIR/$name.result
-  for i in {1..20}
+  for i in {1..10}
   do
     ./mcut $INPUT_DIR/$name maxcut.out >> $RESULT_DIR/$name.result
   done
